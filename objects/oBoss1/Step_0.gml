@@ -63,7 +63,11 @@ if(hitPoints == 0)
 {
 	path_end();
 	var pitch = random_range(0.5, 1.5);
+	if (audio_is_playing(slapHook))
+	{
+		audio_sound_gain(slapHook, 0, 7000);
+	}
 	audio_sound_pitch(bossDead, pitch);
-	audio_play_sound(bossDead,0,0);
+	audio_play_sound(bossDead,0,1);
 	instance_change(oBoss1Death, true);
 }

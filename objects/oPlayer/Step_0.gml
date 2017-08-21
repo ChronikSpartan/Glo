@@ -1,10 +1,10 @@
-key_jump = keyboard_check_pressed(vk_space);
-key_jump_held = keyboard_check(vk_space);
-key_jump_released = keyboard_check_released(vk_space);
-key_left = -keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-right_mb = mouse_check_button(mb_right);
-left_mb = mouse_check_button(mb_left);
+key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_face1);
+key_jump_held = keyboard_check(vk_space) || gamepad_button_check(0, gp_face1);
+key_jump_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0, gp_face1);
+key_left = -(keyboard_check(ord("A"))|| (gamepad_axis_value(0, gp_axislh) < 0));
+key_right = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) > 0);
+right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
+left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
 
 // Set up colliders
 var colliderBelow = instance_place(x, y + 1, oCollider);
@@ -71,7 +71,10 @@ if (hsp < -movementSpeed) hsp = -movementSpeed;
 if (vsp < 10) vsp += grav;
 
 // Fall off screen
-if(y > room_height)	room_restart();
+if(y > room_height)	
+{
+	instance_change(oPlayerExplode, true);
+}
 
 var horizontalJump = movementSpeed;
 

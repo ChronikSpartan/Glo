@@ -20,9 +20,19 @@ if (surface_exists(surf)) {
         draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), oExplode.explodeSize + random_range(-1, 1), false);
 	}
 	
+	with (oPlayerExplode){
+        draw_set_alpha(oPlayerExplode.explodeAlpha);
+        draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), oPlayerExplode.explodeSize + random_range(-1, 1), false);
+	}
+	
 	with (oBombExplode){
         draw_set_alpha(oBombExplode.explodeAlpha);
         draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), oBombExplode.explodeSize + random_range(-1, 1), false);
+	}
+	
+	with (oGlogo){
+        draw_set_alpha(1);
+        draw_rectangle(x, y, x + sprite_width - 1, y + sprite_height - 1, 0);
 	}
 
 

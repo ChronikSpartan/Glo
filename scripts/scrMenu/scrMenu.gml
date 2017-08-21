@@ -2,7 +2,7 @@ switch(menuPos)
 {
 	case 0:
 	{
-		room_goto_next();
+		room_goto(levelSelectScreen);
 		break;
 	}
 	case 1:

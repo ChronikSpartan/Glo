@@ -7,5 +7,5 @@ if instance_exists(oPlayer)
 
 if(place_meeting(x,y,oPlayer))
 {
-	room_restart();
+	instance_change(oPlayerExplode, true);
 }

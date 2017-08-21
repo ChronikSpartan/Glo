@@ -1,2 +1,1 @@
-instance_destroy();
-room_restart();
+instance_change(oPlayerExplode, true);

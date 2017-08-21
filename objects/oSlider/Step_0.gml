@@ -115,7 +115,7 @@ if(place_meeting(x,y,oPlayer))
 	}
 	else
 	{
-		room_restart();
+		instance_change(oPlayerExplode, true);
 	}
 }
 
