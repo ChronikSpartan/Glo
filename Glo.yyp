@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "0f8e232d-24a2-4e8b-9e43-c7258444a76a",
+            "Value": {
+                "id": "5d1b151c-5cd6-4778-a19f-48f70a00f1e9",
+                "resourcePath": "sounds\\stickyStick\\stickyStick.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0fb4342a-7944-48bf-8310-5541693ee52d",
             "Value": {
                 "id": "a04aa8be-8a64-403f-abb3-85ff17f2c7fe",
@@ -171,6 +179,14 @@
             "Value": {
                 "id": "13e55f60-517a-4467-acb1-ff37ccaa4cde",
                 "resourcePath": "sounds\\bullet\\bullet.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1cb0b708-8954-404f-9c12-be7cc1f0f207",
+            "Value": {
+                "id": "71345205-abd1-4338-abb6-76e0296eaa46",
+                "resourcePath": "sounds\\jump\\jump.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -271,6 +287,14 @@
             }
         },
         {
+            "Key": "279b602f-aa1a-4e2a-a9c0-b838a2bb7738",
+            "Value": {
+                "id": "04919a43-d51c-44d6-b58c-af67df02839e",
+                "resourcePath": "sounds\\menuMove\\menuMove.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "29c804d5-6011-482f-890a-22b07716300d",
             "Value": {
                 "id": "5b9b38a4-4c01-4f1e-8dea-b716bd631fb4",
@@ -356,6 +380,14 @@
                 "id": "efb792db-cc09-4195-897e-a5fe5a8cea60",
                 "resourcePath": "rooms\\world1Level15\\world1Level15.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "3c43cf94-9e3f-42c5-8480-fe207a6de953",
+            "Value": {
+                "id": "0de4ac77-8be9-4180-a0ba-f5d854317638",
+                "resourcePath": "objects\\oCamera\\oCamera.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -575,6 +607,14 @@
             }
         },
         {
+            "Key": "67df65fb-229c-4fd0-b288-31a0aa247e7b",
+            "Value": {
+                "id": "1a44bb83-d34a-411d-97f0-e986e0da7f72",
+                "resourcePath": "sounds\\menuSelect\\menuSelect.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "681d0771-e0fa-4569-9549-7ed8f5411dc8",
             "Value": {
                 "id": "b9ab4fca-58fd-4437-a629-eb126d5ff19e",
@@ -588,6 +628,14 @@
                 "id": "e5018b28-2ba3-4d29-bdb7-715af1ba971e",
                 "resourcePath": "objects\\WatchYourHead\\WatchYourHead.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6ca0a0fc-0bc2-4b06-a643-e4e7c300ff1e",
+            "Value": {
+                "id": "57e08e96-b441-42ff-a9e7-569843f57bcc",
+                "resourcePath": "sounds\\pinballShoot\\pinballShoot.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -911,6 +959,14 @@
             }
         },
         {
+            "Key": "99869ebf-46df-4245-bf2d-197d5609ebbe",
+            "Value": {
+                "id": "3436b4ff-3c23-41f1-ad3c-c34ec84a98bf",
+                "resourcePath": "sounds\\stickyDisappear\\stickyDisappear.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9b37c7f6-0c44-4b70-9315-f5578b2cc0a8",
             "Value": {
                 "id": "f6bc9cea-5f32-4495-bdc8-baa80b80a486",
@@ -975,6 +1031,14 @@
             }
         },
         {
+            "Key": "a3a1d783-11be-4a49-bbe1-de814c37d70c",
+            "Value": {
+                "id": "d8bf6d6e-4c0f-46f9-8e05-ab72e5463631",
+                "resourcePath": "objects\\oBossDeathShake\\oBossDeathShake.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a707a9f9-e6fe-4b96-b380-b0bc3b1f6fd2",
             "Value": {
                 "id": "7fb9df44-d69e-4371-9f9e-80b6d46319cf",
@@ -996,6 +1060,14 @@
                 "id": "87f915ae-a8d5-4e96-b692-933f96d363a0",
                 "resourcePath": "objects\\Is\\Is.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a84d8084-b6a3-4017-bf3e-fecebf4dd8f8",
+            "Value": {
+                "id": "5c51bfeb-c647-4fba-bce3-80a8dd300633",
+                "resourcePath": "sounds\\bulletImpact\\bulletImpact.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1039,6 +1111,14 @@
             }
         },
         {
+            "Key": "addc1ca1-a617-49a8-923b-5af0a7ab2508",
+            "Value": {
+                "id": "cbdb7a4c-9a7e-4443-9455-0fa58f4f22d7",
+                "resourcePath": "objects\\oPlayerFallExplode\\oPlayerFallExplode.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "aeee4beb-6ff4-4d98-9751-0580a7862dbe",
             "Value": {
                 "id": "be7833a6-bd31-4656-b742-bed0059a3685",
@@ -1075,6 +1155,14 @@
             "Value": {
                 "id": "df34ce14-032f-49d7-9faa-5cf6a532c364",
                 "resourcePath": "objects\\oBomb\\oBomb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b3572ba9-9088-45ad-8465-f7b915571a16",
+            "Value": {
+                "id": "1d89e1a6-5d17-43d3-89c4-2a2a0c616456",
+                "resourcePath": "objects\\oShake\\oShake.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1372,6 +1460,14 @@
                 "id": "f71ba8ac-9ddf-4cdb-88a5-cda4b35b2f04",
                 "resourcePath": "scripts\\draw_sprite_skew_ext\\draw_sprite_skew_ext.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "effd9896-4803-4b92-add7-021d2f4a1351",
+            "Value": {
+                "id": "10bbbaad-c8ff-4bd7-9bf3-b9102a2868b9",
+                "resourcePath": "sounds\\stickyShoot\\stickyShoot.yy",
+                "resourceType": "GMSound"
             }
         },
         {

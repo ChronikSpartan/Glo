@@ -7,9 +7,9 @@ with(other) instance_destroy();
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4722741F
-/// @DnDArgument : "expr" "10"
+/// @DnDArgument : "expr" "2"
 /// @DnDArgument : "var" "alternateBullets"
-alternateBullets = 10;
+alternateBullets = 2;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

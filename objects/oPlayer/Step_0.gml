@@ -1,7 +1,7 @@
 key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_face1);
 key_jump_held = keyboard_check(vk_space) || gamepad_button_check(0, gp_face1);
 key_jump_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0, gp_face1);
-key_left = -(keyboard_check(ord("A"))|| (gamepad_axis_value(0, gp_axislh) < 0));
+key_left = keyboard_check(ord("A"))|| (gamepad_axis_value(0, gp_axislh) < 0);
 key_right = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) > 0);
 right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
 left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
@@ -18,22 +18,22 @@ var breakableRight = instance_place(x + 1, y , oBreakableBlock);
 var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
 
 // Animation
-if (key_jump)
+if (jumped > 0)
 {
-	//sprite_index = sPlayerJump;
-	playerState = "JUMP";
+	sprite_index = sPlayerJump;
+	jumped -= 1;
 }
-else if (hsp > 0)
+/*else if (hsp > 0)
 {
-	//sprite_index = sPlayerMove;
-	//image_xscale = 1;
-	playerState = "MOVE_RIGHT";
+	sprite_index = sPlayerMove;
+	image_xscale = 1;
+	//playerState = "MOVE_RIGHT";
 }
 else if (hsp < 0)
 {
-	//sprite_index = sPlayerMove;
-	//image_xscale = -1;
-	playerState = "MOVE_LEFT";
+	sprite_index = sPlayerMove;
+	image_xscale = -1;
+	//playerState = "MOVE_LEFT";
 }
 else if(!colliderBelow && !colliderGlowBelow && !breakableBelow)
 {	
@@ -49,53 +49,107 @@ else if(!colliderBelow && !colliderGlowBelow && !breakableBelow)
 		//image_xscale = -1;
 		playerState = "WALL_RIGHT";
 	}
-	else playerState = "STANDING";//sprite_index = sPlayer;
-}
-else playerState = "STANDING";
-//sprite_index = sPlayer;
+	else sprite_index = sPlayer;
+}*/
+else sprite_index = sPlayer;
 
+movement = 0;
 
+// Poll inputs
+if (key_left) _kLeft++; else _kLeft = 0;
+if (key_right) _kRight++; else _kRight = 0;
 //React to inputs
-movement =  key_left + key_right;
+if (_kLeft && (!_kRight || (_kLeft < _kRight))) {
+movement = -1;
+} else if (_kRight && (!_kLeft || (_kRight < _kLeft))) {
+movement = 1;
+}
 
-if(colliderBelow || breakableBelow || colliderGlowBelow /*|| (jumpCount < 1)*/) // Includin jumpCount stops movement on second jump
+if(colliderBelow || breakableBelow || colliderGlowBelow) // Includin jumpCount stops movement on second jump
 {
 	if(movement!=0) hsp += movement * 0.5; else hsp = movement;
 }
+else if(colliderRight || breakableRight || colliderGlowRight || colliderLeft || breakableLeft || colliderGlowLeft)
+{
+	// wait a frame here to make sticky and add friction
+	if(vsp > 0)
+	{
+		terminalVelocity = terminalVelocity/1.5;
+		grav = grav/2;
+	}
+	
+	if(movement!=0)
+	{
+		if(wallStickyTimer == 0)
+		{
+			hsp += movement * 0.5;
+			wallStickyTimer = 5;
+		}
+		else wallStickyTimer -= 1;
+	}
+	else
+	{
+		hsp = movement;
+		wallStickyTimer = 5;
+	}
+}
 else if(movement!=0) hsp += movement * 0.5;
+else hsp = hsp/1.02;
 
 if (hsp > movementSpeed) hsp = movementSpeed;
 
 if (hsp < -movementSpeed) hsp = -movementSpeed;
 
-if (vsp < 10) vsp += grav;
+if (vsp < terminalVelocity) vsp += grav;
+
+// reset gravity and terminal velocity incase it was decreased by wall contact
+grav = 0.5;
+terminalVelocity = 10;
 
 // Fall off screen
 if(y > room_height)	
 {
-	instance_change(oPlayerExplode, true);
+	instance_change(oPlayerFallExplode, true);
 }
 
 var horizontalJump = movementSpeed;
 
-if ((colliderBelow > 0) || (breakableBelow > 0) || (colliderGlowBelow > 0))
+if (colliderBelow || breakableBelow || colliderGlowBelow)
 {
 	// Jump on ground
 	jumpCount = 1;
-	if (key_jump) vsp = -jumpSpeed;	
+	wasOnGround = 5;
+	if (key_jump)
+	{ 
+		vsp = -jumpSpeed;
+		audio_play_sound(jump,0,0);
+		sprite_index = sPlayerJump;
+		jumped = 5;
+	}
+}
+else if (wasOnGround > 0)
+{
+	if (key_jump)
+	{ 
+		vsp = -jumpSpeed;
+		audio_play_sound(jump,0,0);
+		sprite_index = sPlayerJump;
+		jumped = 5;
+	}
+	wasOnGround -= 1;
 }
 else
 {
 	if(key_jump)
 	{
 		//wall jump
-		if (((colliderRight > 0) || (breakableRight > 0) || (colliderGlowRight > 0)))
+		if ((colliderRight|| breakableRight || colliderGlowRight))
 		{			
 				vsp = -jumpSpeed+5;
 				hsp = -horizontalJump;	
 				jumpCount = 1;	
 		}			
-		else if (((colliderLeft > 0) || (breakableLeft > 0) || (colliderGlowLeft > 0)))
+		else if ((colliderLeft || breakableLeft || colliderGlowLeft))
 		{
 				vsp = -jumpSpeed+5;
 				hsp = horizontalJump;
@@ -103,7 +157,11 @@ else
 		}
 		else if (jumpCount>0) // Air Jump
 		{
+			
 			vsp = -jumpSpeed/2;
+			audio_play_sound(jump,0,0);
+			sprite_index = sPlayerJump;
+			jumped = 5;
 			jumpCount -= 1;
 		}		
 	}

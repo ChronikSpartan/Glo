@@ -1,1 +1,1 @@
-instance_change(oPlayerExplode, true);
+instance_change(oPlayerFallExplode, true);

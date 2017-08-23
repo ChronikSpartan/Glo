@@ -42,6 +42,7 @@ if(place_meeting(x,y,oPlayer))
 		with (oPlayer) vsp = -jumpSpeed;
 		if(bossGrace == 0)
 		{
+			instance_create_layer(0,0,"Instances",oShake);
 			var pitch = random_range(0.5, 1.5);
 			audio_sound_pitch(bossHurt, pitch);
 			audio_play_sound(bossHurt,0,0);
@@ -55,7 +56,7 @@ if(place_meeting(x,y,oPlayer))
 	}
 	else
 	{
-		room_restart();
+		instance_change(oPlayerExplode, true);
 	}
 }
 

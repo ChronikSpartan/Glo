@@ -5,6 +5,7 @@ move += max(keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("D")),g
 
 if(move != 0)
 {
+	
 	// Check next move before commiting
 	var nextMove = menuPos + move;
 	// Wrap around menu
@@ -14,6 +15,7 @@ if(move != 0)
 	// Move if level unlocked
 	if(levelArray[nextMove] > 0)
 	{
+		audio_play_sound(menuMove,0,0);
 		menuPos = nextMove;
 	}
 }
@@ -21,7 +23,11 @@ if(move != 0)
 var press;
 press = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_shift), keyboard_check_released(vk_space),gamepad_button_check_released(0,gp_face1), 0);
 
-if(press == 1) scrLevelSelect();
+if(press == 1) 
+{
+	audio_play_sound(menuSelect,0,0);
+	scrLevelSelect();
+}
 
 x = room_width/2 - (menuPos * space); // This aligns the level text
 

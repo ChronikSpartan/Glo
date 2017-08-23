@@ -1,3 +1,4 @@
+audio_play_sound(stickyShoot,0,0);
 direction = oAimPoint.image_angle;
 
 speed = 8;

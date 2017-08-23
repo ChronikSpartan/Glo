@@ -1,4 +1,2 @@
-/// @DnDAction : YoYo Games.Movement.Set_Speed
-/// @DnDVersion : 1
-/// @DnDHash : 5701D435
+audio_play_sound(stickyStick,0,0);
 speed = 0;
