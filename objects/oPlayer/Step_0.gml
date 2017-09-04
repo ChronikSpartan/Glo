@@ -6,6 +6,8 @@ key_right = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) > 0);
 right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
 left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
 
+instance_create_layer(x,y, "Instances", oTrail);
+
 // Set up colliders
 var colliderBelow = instance_place(x, y + 1, oCollider);
 var colliderRight = instance_place(x + 1, y, oCollider);
@@ -16,6 +18,13 @@ var colliderGlowLeft = instance_place(x - 1, y, oColliderGlow);
 var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
 var breakableRight = instance_place(x + 1, y , oBreakableBlock);
 var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
+
+var nearColliderRight = max(instance_place(x + 2, y, oCollider), instance_place(x + 3, y, oCollider), instance_place(x + 4, y, oCollider),0);
+var nearColliderLeft = max(instance_place(x - 2, y, oCollider), instance_place(x - 3, y, oCollider), instance_place(x - 4, y, oCollider),0);
+var nearColliderGlowRight = max(instance_place(x + 2, y, oColliderGlow), instance_place(x + 3, y, oColliderGlow), instance_place(x + 4, y, oColliderGlow),0);
+var nearColliderGlowLeft = max(instance_place(x - 2, y, oColliderGlow), instance_place(x - 3, y, oColliderGlow), instance_place(x - 4, y, oColliderGlow),0);
+var nearBreakableRight = max(instance_place(x + 2, y , oBreakableBlock), instance_place(x + 3, y , oBreakableBlock), instance_place(x + 4, y , oBreakableBlock),0);
+var nearBreakableLeft = max(instance_place(x - 2, y, oBreakableBlock), instance_place(x - 3, y, oBreakableBlock), instance_place(x - 4, y, oBreakableBlock),0);
 
 // Animation
 if (jumped > 0)
@@ -143,13 +152,13 @@ else
 	if(key_jump)
 	{
 		//wall jump
-		if ((colliderRight|| breakableRight || colliderGlowRight))
+		if ((colliderRight|| breakableRight || colliderGlowRight || nearColliderRight|| nearBreakableRight || nearColliderGlowRight))
 		{			
 				vsp = -jumpSpeed+5;
 				hsp = -horizontalJump;	
 				jumpCount = 1;	
 		}			
-		else if ((colliderLeft || breakableLeft || colliderGlowLeft))
+		else if ((colliderLeft || breakableLeft || colliderGlowLeft || nearColliderLeft || nearBreakableLeft || nearColliderGlowLeft))
 		{
 				vsp = -jumpSpeed+5;
 				hsp = horizontalJump;
