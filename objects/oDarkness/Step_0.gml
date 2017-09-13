@@ -109,7 +109,7 @@ if (surface_exists(surf)) {
 		randomRangeY = random_range(-1, 1);
 		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, size, size, 0, c_black, alpha);
 		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, size, size, 0, c_white, 1 - alpha);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, size, size, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);	
 	}
 	
@@ -144,6 +144,26 @@ if (surface_exists(surf)) {
 	}
 	
 	with (oColliderGlow){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.75, 0.75, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.75, 0.75, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oSlidingGlow){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.75, 0.75, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.75, 0.75, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oVertSlidingGlow){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);

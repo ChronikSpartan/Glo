@@ -6,23 +6,43 @@ key_right = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) > 0);
 right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
 left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
 
-instance_create_layer(x,y, "Instances", oTrail);
+//instance_create_layer(x,y, "Instances", oTrail);
 
 // Set up colliders
 var colliderBelow = instance_place(x, y + 1, oCollider);
 var colliderRight = instance_place(x + 1, y, oCollider);
 var colliderLeft = instance_place(x - 1, y, oCollider);
+var slidingColliderBelow = instance_place(x, y + 1, oSlidingCollider);
+var slidingColliderRight = instance_place(x + 1, y, oSlidingCollider);
+var slidingColliderLeft = instance_place(x - 1, y, oSlidingCollider);
+var vertSlidingColliderBelow = instance_place(x, y + 1, oVertSlidingCollider);
+var vertSlidingColliderRight = instance_place(x + 1, y, oVertSlidingCollider);
+var vertSlidingColliderLeft = instance_place(x - 1, y, oVertSlidingCollider);
 var colliderGlowBelow = instance_place(x, y + 1, oColliderGlow);
 var colliderGlowRight = instance_place(x + 1, y, oColliderGlow);
 var colliderGlowLeft = instance_place(x - 1, y, oColliderGlow);
+var slidingGlowBelow = instance_place(x, y + 1, oSlidingGlow);
+var slidingGlowRight = instance_place(x + 1, y, oSlidingGlow);
+var slidingGlowLeft = instance_place(x - 1, y, oSlidingGlow);
+var vertSlidingGlowBelow = instance_place(x, y + 1, oVertSlidingGlow);
+var vertSlidingGlowRight = instance_place(x + 1, y, oVertSlidingGlow);
+var vertSlidingGlowLeft = instance_place(x - 1, y, oVertSlidingGlow);
 var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
 var breakableRight = instance_place(x + 1, y , oBreakableBlock);
 var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
 
 var nearColliderRight = max(instance_place(x + 2, y, oCollider), instance_place(x + 3, y, oCollider), instance_place(x + 4, y, oCollider),0);
 var nearColliderLeft = max(instance_place(x - 2, y, oCollider), instance_place(x - 3, y, oCollider), instance_place(x - 4, y, oCollider),0);
+var nearSlidingColliderRight = max(instance_place(x + 2, y, oSlidingCollider), instance_place(x + 3, y, oSlidingCollider), instance_place(x + 4, y, oSlidingCollider),0);
+var nearSlidingColliderLeft = max(instance_place(x - 2, y, oSlidingCollider), instance_place(x - 3, y, oSlidingCollider), instance_place(x - 4, y, oSlidingCollider),0);
+var nearVertSlidingColliderRight = max(instance_place(x + 2, y, oVertSlidingCollider), instance_place(x + 3, y, oVertSlidingCollider), instance_place(x + 4, y, oVertSlidingCollider),0);
+var nearVertSlidingColliderLeft = max(instance_place(x - 2, y, oVertSlidingCollider), instance_place(x - 3, y, oVertSlidingCollider), instance_place(x - 4, y, oVertSlidingCollider),0);
 var nearColliderGlowRight = max(instance_place(x + 2, y, oColliderGlow), instance_place(x + 3, y, oColliderGlow), instance_place(x + 4, y, oColliderGlow),0);
 var nearColliderGlowLeft = max(instance_place(x - 2, y, oColliderGlow), instance_place(x - 3, y, oColliderGlow), instance_place(x - 4, y, oColliderGlow),0);
+var nearSlidingGlowRight = max(instance_place(x + 2, y, oSlidingGlow), instance_place(x + 3, y, oSlidingGlow), instance_place(x + 4, y, oSlidingGlow),0);
+var nearSlidingGlowLeft = max(instance_place(x - 2, y, oSlidingGlow), instance_place(x - 3, y, oSlidingGlow), instance_place(x - 4, y, oSlidingGlow),0);
+var nearVertSlidingGlowRight = max(instance_place(x + 2, y, oVertSlidingGlow), instance_place(x + 3, y, oVertSlidingGlow), instance_place(x + 4, y, oVertSlidingGlow),0);
+var nearVertSlidingGlowLeft = max(instance_place(x - 2, y, oVertSlidingGlow), instance_place(x - 3, y, oVertSlidingGlow), instance_place(x - 4, y, oVertSlidingGlow),0);
 var nearBreakableRight = max(instance_place(x + 2, y , oBreakableBlock), instance_place(x + 3, y , oBreakableBlock), instance_place(x + 4, y , oBreakableBlock),0);
 var nearBreakableLeft = max(instance_place(x - 2, y, oBreakableBlock), instance_place(x - 3, y, oBreakableBlock), instance_place(x - 4, y, oBreakableBlock),0);
 
@@ -74,11 +94,11 @@ movement = -1;
 movement = 1;
 }
 
-if(colliderBelow || breakableBelow || colliderGlowBelow) // Includin jumpCount stops movement on second jump
+if(colliderBelow || slidingColliderBelow || vertSlidingColliderBelow || breakableBelow || colliderGlowBelow || slidingGlowBelow || vertSlidingGlowBelow) // Includin jumpCount stops movement on second jump
 {
 	if(movement!=0) hsp += movement * 0.5; else hsp = movement;
 }
-else if(colliderRight || breakableRight || colliderGlowRight || colliderLeft || breakableLeft || colliderGlowLeft)
+else if(colliderRight || slidingColliderRight || vertSlidingColliderRight ||breakableRight || colliderGlowRight || slidingGlowRight || vertSlidingGlowRight || colliderLeft || slidingColliderLeft || vertSlidingColliderLeft || breakableLeft || colliderGlowLeft || slidingGlowLeft || vertSlidingGlowLeft)
 {
 	// wait a frame here to make sticky and add friction
 	if(vsp > 0)
@@ -112,7 +132,7 @@ if (hsp < -movementSpeed) hsp = -movementSpeed;
 if (vsp < terminalVelocity) vsp += grav;
 
 // reset gravity and terminal velocity incase it was decreased by wall contact
-grav = 0.5;
+if (!onLift) grav = 0.5; else grav = 0;
 terminalVelocity = 10;
 
 // Fall off screen
@@ -123,7 +143,7 @@ if(y > room_height)
 
 var horizontalJump = movementSpeed;
 
-if (colliderBelow || breakableBelow || colliderGlowBelow)
+if (colliderBelow || slidingColliderBelow || vertSlidingColliderBelow || breakableBelow || colliderGlowBelow || slidingGlowBelow || vertSlidingGlowBelow)
 {
 	// Jump on ground
 	jumpCount = 1;
@@ -152,13 +172,13 @@ else
 	if(key_jump)
 	{
 		//wall jump
-		if ((colliderRight|| breakableRight || colliderGlowRight || nearColliderRight|| nearBreakableRight || nearColliderGlowRight))
+		if ((colliderRight || slidingColliderRight || vertSlidingColliderRight || breakableRight || colliderGlowRight || slidingGlowRight || vertSlidingGlowRight || nearColliderRight || nearSlidingColliderRight || nearVertSlidingColliderRight || nearBreakableRight || nearColliderGlowRight || nearSlidingGlowRight || nearVertSlidingGlowRight))
 		{			
 				vsp = -jumpSpeed+5;
 				hsp = -horizontalJump;	
 				jumpCount = 1;	
 		}			
-		else if ((colliderLeft || breakableLeft || colliderGlowLeft || nearColliderLeft || nearBreakableLeft || nearColliderGlowLeft))
+		else if ((colliderLeft || slidingColliderLeft || vertSlidingColliderLeft || breakableLeft || colliderGlowLeft || slidingGlowLeft || vertSlidingGlowLeft || nearColliderLeft || nearSlidingColliderLeft || nearVertSlidingColliderLeft || nearBreakableLeft || nearColliderGlowLeft || nearSlidingGlowLeft || nearVertSlidingGlowLeft))
 		{
 				vsp = -jumpSpeed+5;
 				hsp = horizontalJump;
@@ -186,38 +206,104 @@ if((vsp < 0) && (!key_jump_held))
 /////////////////////////////// Handle Block Collision////////////////////////
 //Handle all HSP stuff and then VSP so that collisions don't stick in diagonal movement
 
-if(place_meeting(x+hsp,y,oCollider))
+hsp_final = hsp + hsp_carry;
+hsp_carry = 0;
+
+if(place_meeting(x+hsp_final,y,oCollider))
 {
-	while(!place_meeting(x+sign(hsp),y,oCollider))
+	while(!place_meeting(x+sign(hsp_final),y,oCollider))
 	{
-		x+= sign(hsp);
+		x+= sign(hsp_final);
 	}
+	hsp_final = 0;
 	hsp = 0;
 }
 
-if(place_meeting(x+hsp,y,oColliderGlow))
+if(place_meeting(x+hsp_final,y,oSlidingCollider))
 {
-	while(!place_meeting(x+sign(hsp),y,oColliderGlow))
+	while(!place_meeting(x+sign(hsp_final),y,oSlidingCollider))
 	{
-		x+= sign(hsp);
+		x+= sign(hsp_final);
 	}
-	hsp = 0;	
-}
-
-if(place_meeting(x+hsp,y,oBreakableBlock))
-{
-	while(!place_meeting(x+sign(hsp),y,oBreakableBlock))
-	{
-		x+= sign(hsp);
-	}
+	hsp_final = 0;
 	hsp = 0;
 }
 
-x += hsp;
+if(place_meeting(x+hsp_final,y,oVertSlidingCollider))
+{
+	while(!place_meeting(x+sign(hsp_final),y,oVertSlidingCollider))
+	{
+		x+= sign(hsp_final);
+	}
+	hsp_final = 0;
+	hsp = 0;
+}
+
+if(place_meeting(x+hsp_final,y,oColliderGlow))
+{
+	while(!place_meeting(x+sign(hsp_final),y,oColliderGlow))
+	{
+		x+= sign(hsp_final);
+	}
+	hsp_final = 0;
+	hsp = 0;
+}
+
+if(place_meeting(x+hsp_final,y,oSlidingGlow))
+{
+	while(!place_meeting(x+sign(hsp_final),y,oSlidingGlow))
+	{
+		x+= sign(hsp_final);
+	}
+	hsp_final = 0;
+	hsp = 0;
+}
+
+if(place_meeting(x+hsp_final,y,oVertSlidingGlow))
+{
+	while(!place_meeting(x+sign(hsp_final),y,oVertSlidingGlow))
+	{
+		x+= sign(hsp_final);
+	}
+	hsp_final = 0;
+	hsp = 0;
+}
+
+if(place_meeting(x+hsp_final,y,oBreakableBlock))
+{
+	while(!place_meeting(x+sign(hsp_final),y,oBreakableBlock))
+	{
+		x+= sign(hsp_final);
+	}
+	hsp_final = 0;
+	hsp = 0;
+}
+
+x += hsp_final;
 
 if(place_meeting(x,y+vsp,oCollider))
 {
 	while(!place_meeting(x,y+sign(vsp),oCollider))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	onGround = true;
+}
+
+if(place_meeting(x,y+vsp,oSlidingCollider))
+{
+	while(!place_meeting(x,y+sign(vsp),oSlidingCollider))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	onGround = true;
+}
+
+if(place_meeting(x,y+vsp,oVertSlidingCollider))
+{
+	while(!place_meeting(x,y+sign(vsp),oVertSlidingCollider))
 	{
 		y+= sign(vsp);
 	}
@@ -235,6 +321,25 @@ if(place_meeting(x,y+vsp,oColliderGlow))
 	onGround = true;
 }
 
+if(place_meeting(x,y+vsp,oSlidingGlow))
+{
+	while(!place_meeting(x,y+sign(vsp),oSlidingGlow))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	onGround = true;
+}
+
+if(place_meeting(x,y+vsp,oVertSlidingGlow))
+{
+	while(!place_meeting(x,y+sign(vsp),oVertSlidingGlow))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	onGround = true;
+}
 
 if(place_meeting(x,y+vsp,oBreakableBlock))
 {

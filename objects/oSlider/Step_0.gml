@@ -1,10 +1,10 @@
-// Set up colliders
-var colliderBelow = instance_place(x, y + 1, oCollider);
-var colliderRight = instance_place(x + 1, y, oCollider);
-var colliderLeft = instance_place(x - 1, y, oCollider);
-var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
-var breakableRight = instance_place(x + 1, y , oBreakableBlock);
-var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
+//// Set up colliders
+//var colliderBelow = instance_place(x, y + 1, oCollider);
+//var colliderRight = instance_place(x + 1, y, oCollider);
+//var colliderLeft = instance_place(x - 1, y, oCollider);
+//var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
+//var breakableRight = instance_place(x + 1, y , oBreakableBlock);
+//var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
 
 hsp = dir * movementSpeed;
 
@@ -14,6 +14,26 @@ if (vsp < 10) vsp += grav;
 if(place_meeting(x+hsp,y,oCollider))
 {
 	while(!place_meeting(x+sign(hsp),y,oCollider))
+	{
+		x+= sign(hsp);
+	}
+	hsp = 0;
+	dir *= -1;
+}
+
+if(place_meeting(x+hsp,y,oSlidingCollider))
+{
+	while(!place_meeting(x+sign(hsp),y,oSlidingCollider))
+	{
+		x+= sign(hsp);
+	}
+	hsp = 0;
+	dir *= -1;
+}
+
+if(place_meeting(x+hsp,y,oVertSlidingCollider))
+{
+	while(!place_meeting(x+sign(hsp),y,oVertSlidingCollider))
 	{
 		x+= sign(hsp);
 	}
@@ -60,6 +80,32 @@ if(place_meeting(x,y+vsp,oCollider))
 	}
 	vsp = 0;
 	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider))
+	{
+		dir *= -1;
+	}
+}
+
+if(place_meeting(x,y+vsp,oSlidingCollider))
+{
+	while(!place_meeting(x,y+sign(vsp),oSlidingCollider))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider))
+	{
+		dir *= -1;
+	}
+}
+
+if(place_meeting(x,y+vsp,oVertSlidingCollider))
+{
+	while(!place_meeting(x,y+sign(vsp),oVertSlidingCollider))
+	{
+		y+= sign(vsp);
+	}
+	vsp = 0;
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider))
 	{
 		dir *= -1;
 	}

@@ -1,0 +1,1 @@
+instance_change(oVertSlidingCollider, false);
