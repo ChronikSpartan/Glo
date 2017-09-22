@@ -9,3 +9,5 @@ alarm_set(0, 240);
 
 // Boss impact
 bossImpact = 0;
+
+instance_impact_id = 0;

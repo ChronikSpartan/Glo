@@ -45,7 +45,7 @@ y += vsp;
 
 if(instance_exists(oPlayer))
 {
-	if (place_meeting(x,y-1,oPlayer) && (oPlayer.y < y + 2)) 
+	if (place_meeting(x,y-2,oPlayer) && (oPlayer.y < y + 2)) 
 	{		
 		
 		oPlayer.y = y - 17;

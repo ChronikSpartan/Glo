@@ -7,4 +7,7 @@ audio_play_sound(pinballBounce,0,0);
 
 colour = (random_range(0, 6));
 
+// correct position
+other.y += sign(other.vsp);
+
 with(other) instance_change(oVertSlidingGlow, true);

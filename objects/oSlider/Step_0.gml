@@ -11,6 +11,17 @@ hsp = dir * movementSpeed;
 if (vsp < 10) vsp += grav;
 
 // Horizontal Collision
+if(place_meeting(x+hsp,y,oSlider))
+{
+	while(!place_meeting(x+sign(hsp),y,oSlider))
+	{
+		x+= sign(hsp);
+	}
+	hsp = 0;
+	dir *= -1;
+}
+
+// Horizontal Collision
 if(place_meeting(x+hsp,y,oCollider))
 {
 	while(!place_meeting(x+sign(hsp),y,oCollider))

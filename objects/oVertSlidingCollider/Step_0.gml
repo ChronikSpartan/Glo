@@ -45,7 +45,7 @@ y += vsp;
 
 if(instance_exists(oPlayer))
 {
-	if (place_meeting(x,y-1,oPlayer) && (oPlayer.y < y + 2)) 
+	if (place_meeting(x,y-2,oPlayer) && (oPlayer.y < y + 2)) 
 	{		
 		
 		oPlayer.y = y - 17;
@@ -55,7 +55,7 @@ if(instance_exists(oPlayer))
 		{
 			with(oPlayer)
 			{
-				if(place_meeting(x, y-1, oCollider) || place_meeting(x, y-1, oSlidingCollider) || place_meeting(x, y-1, oVertSlidingCollider))
+				if(place_meeting(x, y-1, oCollider) || place_meeting(x, y-1, oSlidingCollider) || place_meeting(x, y-1, oVertSlidingCollider) || place_meeting(x-1, y, oSlidingGlow)  || place_meeting(x-1, y, oVertSlidingGlow))
 				{
 					instance_change(oPlayerFallExplode, true);
 				}
@@ -66,9 +66,10 @@ if(instance_exists(oPlayer))
 	
 	if (place_meeting(x,y+1,oPlayer) && (oPlayer.y > y + 2) && (vsp > 0)) 
 	{		
+		oPlayer.y = y + 47;
 		with(oPlayer)
 		{
-			if(place_meeting(x, y+1, oCollider) || place_meeting(x, y+1, oSlidingCollider) || place_meeting(x, y+1, oVertSlidingCollider))
+			if(place_meeting(x, y+1, oCollider) || place_meeting(x, y+1, oSlidingCollider) || place_meeting(x, y+1, oVertSlidingCollider) || place_meeting(x+1, y, oSlidingGlow)  || place_meeting(x+1, y, oVertSlidingGlow))
 			{
 				instance_change(oPlayerFallExplode, true);
 			}
