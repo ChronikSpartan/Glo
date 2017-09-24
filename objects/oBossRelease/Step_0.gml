@@ -1,1 +1,1 @@
-glowSize+=0.005;
+glowSize+=0.01;

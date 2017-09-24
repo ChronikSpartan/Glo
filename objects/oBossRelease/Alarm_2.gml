@@ -1,0 +1,1 @@
+stopDots = 1;

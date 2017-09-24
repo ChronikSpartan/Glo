@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "08529e74-0e66-41ca-8025-8f1301272f2a",
+            "Value": {
+                "id": "650a0590-228e-4ad1-9876-c25422fb4cb4",
+                "resourcePath": "sprites\\sPlayerBits\\sPlayerBits.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "089d709e-f07c-4c6f-b6dd-f0984b80cae4",
             "Value": {
                 "id": "f175195d-4645-40c8-adce-84318468859a",
@@ -643,6 +651,14 @@
             "Value": {
                 "id": "d5af2092-71f4-4367-8081-18ffca0eae7c",
                 "resourcePath": "objects\\SoMuchStronger\\SoMuchStronger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3bcd0f4e-21c8-4b71-9874-caf0bd490251",
+            "Value": {
+                "id": "9f2544bf-c796-40d0-859e-8d33cf3fbbcf",
+                "resourcePath": "objects\\oPlayerBits\\oPlayerBits.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1420,6 +1436,14 @@
                 "id": "7845025f-b48f-4a85-9e0b-da1ee0eb78bc",
                 "resourcePath": "rooms\\world4Level10\\world4Level10.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "8d931298-d6ae-4385-af62-93b519197edc",
+            "Value": {
+                "id": "373e8b54-7429-4c26-8f4e-412acc97cef8",
+                "resourcePath": "objects\\oReleaseDot\\oReleaseDot.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2251,6 +2275,14 @@
             "Value": {
                 "id": "140df182-3726-4b3a-bb32-7c0981296861",
                 "resourcePath": "objects\\StopTryingToEscape\\StopTryingToEscape.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d946d9ca-586a-40c2-b3b5-28c2bba1b8fc",
+            "Value": {
+                "id": "30dee207-4dd7-410b-8fe6-8af7705e0d5b",
+                "resourcePath": "objects\\oFadeToWhite\\oFadeToWhite.yy",
                 "resourceType": "GMObject"
             }
         },
