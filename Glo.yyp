@@ -82,7 +82,7 @@
             "Key": "068dc3d7-fcb0-46b5-a885-175270ca1f1e",
             "Value": {
                 "id": "04cdc636-0f46-4fcb-8e3e-bce1cdcf0534",
-                "resourcePath": "rooms\\world3Levelx1\\world3Levelx1.yy",
+                "resourcePath": "rooms\\world3Level1\\world3Level1.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -164,6 +164,14 @@
                 "id": "97b41096-7eaf-4039-bdce-f699c4614df6",
                 "resourcePath": "objects\\oBoss1\\oBoss1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0b968741-2404-4e14-ad06-4b8eab665428",
+            "Value": {
+                "id": "238274b6-9555-4123-8d45-29f167df0daa",
+                "resourcePath": "sprites\\sBossRelease\\sBossRelease.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -259,6 +267,14 @@
             "Value": {
                 "id": "2de08efd-f20f-4551-8c20-4c2a4458f5ad",
                 "resourcePath": "rooms\\world1Level11\\world1Level11.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "173ff7f0-b5d7-42aa-aea7-1384778dcc4f",
+            "Value": {
+                "id": "7266b250-d9a3-45a5-9a36-777e21d3cd5e",
+                "resourcePath": "rooms\\world2Boss\\world2Boss.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -367,6 +383,14 @@
             }
         },
         {
+            "Key": "228831e9-71dc-41ef-9c10-753643c3ffb5",
+            "Value": {
+                "id": "20d35b92-5d1a-457a-a3f2-5648a72398c6",
+                "resourcePath": "sprites\\sBoss4\\sBoss4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "228a0980-e357-48f8-bf0d-f1fe20f806a9",
             "Value": {
                 "id": "b1e03c84-5d55-4bc0-8849-001fa5bf183d",
@@ -471,6 +495,14 @@
             }
         },
         {
+            "Key": "29d317d7-2032-47c9-aa42-aa7c30410d3d",
+            "Value": {
+                "id": "d79f96a9-d8e3-47a9-845b-88b46e470f08",
+                "resourcePath": "objects\\oBoss4Phase1\\oBoss4Phase1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2aa4f3ca-129f-46e0-aa34-6ec15a7ddae5",
             "Value": {
                 "id": "455854d4-e4ae-4fbe-8cea-5f683bb7c380",
@@ -555,6 +587,14 @@
             "Value": {
                 "id": "c8a1a9ee-cbf8-4e82-bfe2-6fb3cd05e56a",
                 "resourcePath": "rooms\\world3Levelx22\\world3Levelx22.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "35073fab-d241-4e79-bb07-f8aa9df4eb12",
+            "Value": {
+                "id": "d2b98aa1-d717-42be-8853-6b2d215fa220",
+                "resourcePath": "rooms\\world4Boss\\world4Boss.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -743,6 +783,22 @@
             }
         },
         {
+            "Key": "4cd8b717-1a6b-4389-91a9-8397db385a7a",
+            "Value": {
+                "id": "cb62b05a-bd9b-4155-b71c-ad4154de933c",
+                "resourcePath": "paths\\pBoss1P2\\pBoss1P2.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "4d232855-d903-4e62-a851-9ad873a6fda0",
+            "Value": {
+                "id": "c3eff157-4b7b-44df-99d3-fd7f794772db",
+                "resourcePath": "objects\\oBoss3\\oBoss3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4d28b757-c2da-4012-94f1-a2a64b2ac18e",
             "Value": {
                 "id": "1a9c4665-f0cb-47a5-9c29-ec860205ad4b",
@@ -903,6 +959,14 @@
             }
         },
         {
+            "Key": "635bc678-64b0-411b-9403-2e941a4bf865",
+            "Value": {
+                "id": "bce596e0-cf85-4afb-b9b4-a8a1dc192e1c",
+                "resourcePath": "objects\\oBoss4Death\\oBoss4Death.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "63ed705f-81ad-4899-bf62-c67d3c43a764",
             "Value": {
                 "id": "d3420715-7629-4a85-90ab-0a079eb8211a",
@@ -964,6 +1028,14 @@
                 "id": "b9ab4fca-58fd-4437-a629-eb126d5ff19e",
                 "resourcePath": "views\\681d0771-e0fa-4569-9549-7ed8f5411dc8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "68693bfb-aff0-4936-a713-65b05345bb4d",
+            "Value": {
+                "id": "0d84618c-f605-4bdd-9bb4-895cdb11ee80",
+                "resourcePath": "rooms\\world3Boss\\world3Boss.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1035,6 +1107,14 @@
             "Value": {
                 "id": "7275b4e2-2c8f-4c66-9b54-b28493c2c0f0",
                 "resourcePath": "objects\\oCursor\\oCursor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6ec898ea-00fc-41cd-b8de-954a59e9374f",
+            "Value": {
+                "id": "16d5ad92-8523-46be-a96f-4be6f335e251",
+                "resourcePath": "objects\\oBoss2\\oBoss2.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1279,6 +1359,14 @@
             }
         },
         {
+            "Key": "858ff860-49bb-41cb-b090-de692bc7a649",
+            "Value": {
+                "id": "20202066-d026-450e-b391-fe6362ac2632",
+                "resourcePath": "objects\\oDarkBullet\\oDarkBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8645af6d-65f3-41c8-9507-90a470712112",
             "Value": {
                 "id": "5ce17f56-ccfd-4039-80db-b716c1bc686a",
@@ -1346,7 +1434,7 @@
             "Key": "9016bfa5-287f-4878-a55f-2769fee81a8c",
             "Value": {
                 "id": "09792e1f-13c3-4730-b642-b569787adc2f",
-                "resourcePath": "paths\\pBoss3\\pBoss3.yy",
+                "resourcePath": "paths\\pBoss3P3\\pBoss3P3.yy",
                 "resourceType": "GMPath"
             }
         },
@@ -1559,11 +1647,27 @@
             }
         },
         {
+            "Key": "a2a093f4-6509-49be-92a9-52d6c90532c5",
+            "Value": {
+                "id": "1b8b48a0-edb0-48ad-bdc1-c18f371cdc27",
+                "resourcePath": "paths\\pBoss4P1\\pBoss4P1.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "a2eeb7b7-21e5-420e-adbe-ec8fc07fab91",
             "Value": {
                 "id": "f5e9aabd-e5bb-4dca-b2e0-7052d869065f",
                 "resourcePath": "sprites\\sGradient\\sGradient.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a3434eb6-e220-4a32-93e3-3fc1e7c7b07c",
+            "Value": {
+                "id": "434db0fa-4cd3-4f4c-bc3c-05023f5ede9d",
+                "resourcePath": "objects\\oBoss4Phase2\\oBoss4Phase2.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1695,6 +1799,14 @@
             }
         },
         {
+            "Key": "ad83254b-7261-4dfa-b42c-ac8e03dd3e49",
+            "Value": {
+                "id": "cf35bc64-7594-4439-87c3-88d206018f6f",
+                "resourcePath": "paths\\pBoss1P3\\pBoss1P3.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "addc1ca1-a617-49a8-923b-5af0a7ab2508",
             "Value": {
                 "id": "cbdb7a4c-9a7e-4443-9455-0fa58f4f22d7",
@@ -1759,6 +1871,14 @@
             }
         },
         {
+            "Key": "b22a3dc0-4102-420e-a0a2-48e6caff5f94",
+            "Value": {
+                "id": "b65a25e9-bdcf-44fd-b84f-d14da7175dcd",
+                "resourcePath": "objects\\oBossRelease\\oBossRelease.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b3572ba9-9088-45ad-8465-f7b915571a16",
             "Value": {
                 "id": "1d89e1a6-5d17-43d3-89c4-2a2a0c616456",
@@ -1786,7 +1906,7 @@
             "Key": "b644fc54-94b7-4bce-9cce-9803c4b3d3fb",
             "Value": {
                 "id": "1787a63d-c581-438f-9124-3ac6d9f3736b",
-                "resourcePath": "paths\\pBoss2\\pBoss2.yy",
+                "resourcePath": "paths\\pBoss3P2\\pBoss3P2.yy",
                 "resourceType": "GMPath"
             }
         },
@@ -1999,6 +2119,14 @@
             }
         },
         {
+            "Key": "cb2a2fea-688b-492c-951d-43402994d84b",
+            "Value": {
+                "id": "52d6b9a6-db10-44ac-a181-b0fdccccb829",
+                "resourcePath": "paths\\pBoss4P2\\pBoss4P2.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "cb4b82c5-b6b9-4714-8252-15aefa3b11fc",
             "Value": {
                 "id": "c102d016-c6cc-4295-88ac-8582cc13243e",
@@ -2095,6 +2223,14 @@
             }
         },
         {
+            "Key": "d6b0f844-6d5d-4cb4-8a0b-923f75edef07",
+            "Value": {
+                "id": "6e7542d5-2678-456c-b370-745f8d3f1a36",
+                "resourcePath": "paths\\pBoss1P1\\pBoss1P1.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "d7478b1f-0e30-4c5d-bee2-6c7a4f033a0a",
             "Value": {
                 "id": "b957779b-7a6c-4d2f-9e1f-d16d508ba613",
@@ -2186,7 +2322,7 @@
             "Key": "e27de329-6e53-42f0-b450-2a36ccd47ce7",
             "Value": {
                 "id": "1351d1e7-0cb8-4887-8eec-690b31b60571",
-                "resourcePath": "paths\\pBoss1\\pBoss1.yy",
+                "resourcePath": "paths\\pBoss3P1\\pBoss3P1.yy",
                 "resourceType": "GMPath"
             }
         },
@@ -2300,6 +2436,14 @@
                 "id": "9f33ee26-3580-499f-8597-03482ba9e5bc",
                 "resourcePath": "rooms\\world1Level1000\\world1Level1000.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "f1f54b8d-2c4d-4d35-96f2-cef993080720",
+            "Value": {
+                "id": "89aafa56-5f52-43bd-9677-e15da4213436",
+                "resourcePath": "objects\\oBoss4Phase3\\oBoss4Phase3.yy",
+                "resourceType": "GMObject"
             }
         },
         {

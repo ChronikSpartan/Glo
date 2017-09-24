@@ -28,7 +28,8 @@
         "f2217eb5-4085-4c4a-bc79-5dcb048887a5",
         "693322a2-0c6a-4356-821f-f84e6986b83e",
         "08359290-8c0a-48ae-b2af-8479390bccc3",
-        "a50459b1-7552-44d8-a282-4e8bdd029198"
+        "a50459b1-7552-44d8-a282-4e8bdd029198",
+        "173ff7f0-b5d7-42aa-aea7-1384778dcc4f"
     ],
     "filterType": "GMRoom",
     "folderName": "World 2",

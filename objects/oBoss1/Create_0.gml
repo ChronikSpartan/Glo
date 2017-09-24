@@ -13,4 +13,4 @@ waiting = false;
 currentPathSpeed = 6;
 
 pathInPlay = 1;
-path_start(pBoss1, currentPathSpeed, path_action_stop, true);
+path_start(pBoss1P1, currentPathSpeed, path_action_stop, true);

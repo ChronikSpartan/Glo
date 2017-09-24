@@ -28,7 +28,8 @@
         "3400aa1f-ed6e-4ed7-ac45-2a5ff0ab2d5d",
         "75a33af9-6750-4ca5-ada1-728d620b196d",
         "1ab40d56-cc4d-439d-a562-0f58ec771c8e",
-        "2aa4f3ca-129f-46e0-aa34-6ec15a7ddae5"
+        "2aa4f3ca-129f-46e0-aa34-6ec15a7ddae5",
+        "68693bfb-aff0-4936-a713-65b05345bb4d"
     ],
     "filterType": "GMRoom",
     "folderName": "World 3",

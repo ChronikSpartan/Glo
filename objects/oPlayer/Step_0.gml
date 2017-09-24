@@ -467,7 +467,7 @@ if(alternateBullets > 0)
 		{
 			if(bulletType == "sticky")
 			{
-				instance_create_layer(x, y, "Instances", oStickyBullet);
+				instance_create_layer(x, y, "EnemyLayer", oStickyBullet);
 			}
 		
 			else

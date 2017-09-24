@@ -30,5 +30,10 @@ spcKeyReleased = true;
 playerState = "STANDING";
 jumped = 0;
 
+previousX = x;
+previousY = y;
+
+alarm_set(0,60);
+
 
 gamepad_set_axis_deadzone(0, 0.4);

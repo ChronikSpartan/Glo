@@ -13,7 +13,7 @@ if ((hitPoints == 1) && (currentPathSpeed > 0))
 	{
 		currentPathSpeed = 0;
 		alarm_set(2, 60);
-		path_start(pBoss3, currentPathSpeed, path_action_restart, true);
+		path_start(pBoss1P3, currentPathSpeed, path_action_restart, true);
 		pathInPlay = 3;
 	}
 }
@@ -26,7 +26,7 @@ if((pathInPlay == 1) && (path_position == 1) && !waiting)
 else if((pathInPlay == 2) && (path_position == 1)) 
 {
 	currentPathSpeed = 6;
-	path_start(pBoss1, currentPathSpeed, path_action_stop, true);
+	path_start(pBoss1P1, currentPathSpeed, path_action_stop, true);
 	pathInPlay = 1;
 }
 
@@ -39,7 +39,11 @@ if(place_meeting(x,y,oPlayer))
 	//Are we above enemy? (assuming CoG of both enemy and player is the same)
 	if(oPlayer.y < y-8)
 	{
-		with (oPlayer) vsp = -jumpSpeed;
+		with (oPlayer) 
+		{
+			vsp = -jumpSpeed;
+		}
+		
 		if(bossGrace == 0)
 		{
 			instance_create_layer(0,0,"Instances",oShake);
