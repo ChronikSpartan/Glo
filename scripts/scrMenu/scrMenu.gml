@@ -10,5 +10,10 @@ switch(menuPos)
 		game_end();
 		break;
 	}
+	case 2:
+	{
+		room_goto(memoriesScreen);
+		break;
+	}
 	default: break;
 }

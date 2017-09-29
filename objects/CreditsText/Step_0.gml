@@ -1,0 +1,1 @@
+if(moveText) y-=1;

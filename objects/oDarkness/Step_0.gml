@@ -1,3 +1,4 @@
+
 /// @description Execute Code
 // Surfaces are volatile 
 // Always check that they haven't been destroyed 
@@ -347,6 +348,36 @@ if (surface_exists(surf)) {
 		gpu_set_blendmode(bm_subtract);
 	}
 	
+	with (oControllerMovement){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oADKeys){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oArrows){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
 	with (oPlayerBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
@@ -354,6 +385,36 @@ if (surface_exists(surf)) {
 		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_black, 1);
 		gpu_set_blendmode(bm_zero);
 		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oControllerJump){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oSpaceBar){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
+	with (oEnter){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);
 	}
 	

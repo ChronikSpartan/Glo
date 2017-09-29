@@ -1,8 +1,8 @@
-key_jump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_face1);
-key_jump_held = keyboard_check(vk_space) || gamepad_button_check(0, gp_face1);
-key_jump_released = keyboard_check_released(vk_space) || gamepad_button_check_released(0, gp_face1);
-key_left = keyboard_check(ord("A"))|| (gamepad_axis_value(0, gp_axislh) < 0);
-key_right = keyboard_check(ord("D")) || (gamepad_axis_value(0, gp_axislh) > 0);
+key_jump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1);
+key_jump_held = keyboard_check(vk_space) || keyboard_check(vk_enter)  || gamepad_button_check(0, gp_face1);
+key_jump_released = keyboard_check_released(vk_space) || keyboard_check_released(vk_enter)  || gamepad_button_check_released(0, gp_face1);
+key_left = keyboard_check(ord("A")) || keyboard_check(vk_left) || (gamepad_axis_value(0, gp_axislh) < 0);
+key_right = keyboard_check(ord("D")) || keyboard_check(vk_right)  || (gamepad_axis_value(0, gp_axislh) > 0);
 right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
 left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
 
