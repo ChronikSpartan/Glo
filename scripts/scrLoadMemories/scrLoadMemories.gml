@@ -27,6 +27,27 @@ if (file_exists("save.sav"))
 	argument0[23]  = ini_read_real("MEMORY", "24", 0);
 	argument0[24]  = ini_read_real("MEMORY", "25", 0);
 	argument0[25]  = ini_read_real("MEMORY", "26", 0);
+	argument0[26]  = ini_read_real("MEMORY", "27", 0);
+	argument0[27]  = ini_read_real("MEMORY", "28", 0);
+	argument0[28]  = ini_read_real("MEMORY", "29", 0);
+	argument0[29]  = ini_read_real("MEMORY", "30", 0);
+	argument0[30]  = ini_read_real("MEMORY", "31", 0);
+	argument0[31]  = ini_read_real("MEMORY", "32", 0);
+	argument0[32]  = ini_read_real("MEMORY", "33", 0);
+	argument0[33]  = ini_read_real("MEMORY", "34", 0);
+	argument0[34]  = ini_read_real("MEMORY", "35", 0);
+	argument0[35]  = ini_read_real("MEMORY", "36", 0);
+	argument0[36]  = ini_read_real("MEMORY", "37", 0);
+	argument0[37]  = ini_read_real("MEMORY", "38", 0);
+	argument0[38]  = ini_read_real("MEMORY", "39", 0);
+	argument0[39]  = ini_read_real("MEMORY", "40", 0);
+	argument0[40]  = ini_read_real("MEMORY", "41", 0);
+	argument0[41]  = ini_read_real("MEMORY", "42", 0);
+	argument0[42]  = ini_read_real("MEMORY", "43", 0);
+	argument0[43]  = ini_read_real("MEMORY", "44", 0);
+	argument0[44]  = ini_read_real("MEMORY", "45", 0);
+	argument0[45]  = ini_read_real("MEMORY", "46", 0);
+	argument0[46]  = ini_read_real("MEMORY", "47", 0);
 	ini_close();
 }
 

@@ -23,11 +23,17 @@ if(move != 0)
 var press;
 press = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_shift), keyboard_check_released(vk_space),gamepad_button_check_released(0,gp_face1), 0);
 
+
 if(press == 1) 
 {
 	audio_play_sound(menuSelect,0,0);
 	scrLevelSelect();
 }
+
+var goBack;
+goBack = max(keyboard_check_released(vk_escape), gamepad_button_check_released(0,gp_select), 0);
+
+if(goBack = 1) room_goto(startScreen);
 
 x = room_width/2 - (menuPos * space); // This aligns the level text
 

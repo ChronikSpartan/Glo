@@ -959,6 +959,14 @@
             }
         },
         {
+            "Key": "4681b7c2-298b-40b2-a6d7-1b5e46f60e25",
+            "Value": {
+                "id": "f7f296a1-e17d-4a5b-87ee-f468793da4b4",
+                "resourcePath": "sprites\\sBlack\\sBlack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "46bcfb03-fd9f-4c96-8d68-46614133b82e",
             "Value": {
                 "id": "0e5f6837-8417-45ba-986c-86826d30fc2f",
