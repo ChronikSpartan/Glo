@@ -1,0 +1,1 @@
+instance_change(oBoss2Disappear, true);

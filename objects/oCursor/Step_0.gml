@@ -1,0 +1,1 @@
+if(gamepad_is_connected(0)) cursor_sprite = sBlank; else cursor_sprite = sCursor;
