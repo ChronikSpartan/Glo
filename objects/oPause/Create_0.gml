@@ -1,8 +1,8 @@
 pause = 0;
 
 /// @description Execute Code
-menu[0] = "EXIT";
-menu[1] = "NEXT"
+menu[0] = "RESTART";
+menu[1] = "EXIT"
 
 viewWidth = view_wport[0];
 viewHeight = view_hport[0];

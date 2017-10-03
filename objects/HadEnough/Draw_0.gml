@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "I have had enough!");
+draw_text_colour(x, y, "I have had enough!", c_black, c_black, c_black,c_black,alpha);

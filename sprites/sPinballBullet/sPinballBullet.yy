@@ -56,6 +56,7 @@
     "origin": 9,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
+    "premultiplyAlpha": false,
     "sepmasks": false,
     "swatchColours": [
         4278190335,
