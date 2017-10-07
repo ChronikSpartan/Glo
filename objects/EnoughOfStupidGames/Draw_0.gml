@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "Enough of your\nstupid games!");
+draw_text_colour(x, y, "Enough of your\nstupid games!", c_black, c_black, c_black,c_black,alpha);

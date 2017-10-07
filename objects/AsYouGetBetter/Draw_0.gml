@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "As you get better");
+draw_text_colour(x, y, "As you get better", c_black, c_black, c_black,c_black,alpha);

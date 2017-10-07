@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oBombCollector",
     "eventList": [
-        
+        {
+            "id": "107fb8a4-6c6b-480c-ba87-3bcaeb240cb1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "bf7cc855-19e5-4b80-ae68-8e7318e8ba66"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",

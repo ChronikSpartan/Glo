@@ -106,30 +106,13 @@ if (surface_exists(surf)) {
 	}
 	
 	with (oKey){
-		randomColour = make_colour_rgb(random(255), random(255), random(255));
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);
 		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_black, 1);
-		
-		l_sprite = sGlow; //sprite to use (Always use white sprite with gradient for best result.)
-		l_xscale = 0.5; // Xscale factor of the sprite.
-		l_yscale = 0.5; // Yscale factor of the sprite.
-		l_color[0] = c_red; // The light color. (Black is no color.)
-		l_color[1] = c_teal;
-		l_color[2] = c_fuchsia;
-		l_color[3] = c_aqua;
-		l_color[4] = c_yellow;
-		l_color[5] = c_purple;
-		l_color[6] = c_lime;
-		l_flick_id = 1; //Flickering. That affects the size of BOTH Xscale and Yscale.
-		l_max_range = 1;
-		l_flick = choose(1, 1, 1, 1, 1, 1, l_flick_id); 
-		
-		gpu_set_blendmode(bm_zero); //Add some color
-        draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, l_xscale*l_flick, l_yscale*l_flick, 0, l_color[random_range(0, 6)], 0.7); //You can change the last argument here.        
-        gpu_set_blendmode(bm_subtract);
-		draw_set_color(c_white);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
 	}
 	
 	with (oEnterLevel){
@@ -348,75 +331,49 @@ if (surface_exists(surf)) {
 		gpu_set_blendmode(bm_subtract);
 	}
 	
-	with (oControllerMovement){
-		randomRangeX = random_range(-1, 1);
-		randomRangeY = random_range(-1, 1);
-		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
-		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
-		gpu_set_blendmode(bm_subtract);
-	}
 	
-	with (oADKeys){
-		randomRangeX = random_range(-1, 1);
-		randomRangeY = random_range(-1, 1);
-		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
-		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
-		gpu_set_blendmode(bm_subtract);
-	}
-	
-	with (oArrows){
-		randomRangeX = random_range(-1, 1);
-		randomRangeY = random_range(-1, 1);
-		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
-		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
-		gpu_set_blendmode(bm_subtract);
-	}
 	
 	with (oPlayerBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_black, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_black, 1);
 		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_white, 0);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);
 	}
 	
-	with (oControllerJump){
+	with (oSliderBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_black, 1);
 		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);
 	}
 	
-	with (oSpaceBar){
+	with (oFloaterBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_black, 1);
 		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);
 	}
 	
-	with (oEnter){
+	with (oBreakableBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
 		randomRangeSize = random_range(-1, 1);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_black, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_black, 1);
 		gpu_set_blendmode(bm_zero);
-		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, image_xscale * glowSize, image_yscale * glowSize, 0, c_white, 0);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.25, 0.25, 0, c_white, 0);
 		gpu_set_blendmode(bm_subtract);
 	}
+	
+	
 	
 	with (oBombDot){
 		randomColour = make_colour_rgb(random(255), random(255), random(255));
@@ -441,6 +398,33 @@ if (surface_exists(surf)) {
 		
 		gpu_set_blendmode(bm_zero); //Add some color
         draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, l_xscale*l_flick, l_yscale*l_flick, 0, l_color[random_range(0, 6)], 0.7); //You can change the last argument here.        
+        gpu_set_blendmode(bm_subtract);
+		draw_set_color(c_white);
+	}
+	
+	with (oReleaseDot2){
+		randomColour = make_colour_rgb(random(255), random(255), random(255));
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_black, 1);
+		
+		l_sprite = sGlow; //sprite to use (Always use white sprite with gradient for best result.)
+		l_xscale = 0.5; // Xscale factor of the sprite.
+		l_yscale = 0.5; // Yscale factor of the sprite.
+		l_color[0] = c_red; // The light color. (Black is no color.)
+		l_color[1] = c_teal;
+		l_color[2] = c_fuchsia;
+		l_color[3] = c_aqua;
+		l_color[4] = c_yellow;
+		l_color[5] = c_purple;
+		l_color[6] = c_lime;
+		l_flick_id = 1; //Flickering. That affects the size of BOTH Xscale and Yscale.
+		l_max_range = 1;
+		l_flick = choose(1, 1, 1, 1, 1, 1, l_flick_id); 
+		
+		gpu_set_blendmode(bm_zero); //Add some color
+        draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, l_xscale*l_flick, l_yscale*l_flick, 0, l_color[dotColour], 0.9); //You can change the last argument here.        
         gpu_set_blendmode(bm_subtract);
 		draw_set_color(c_white);
 	}
@@ -484,8 +468,37 @@ if (surface_exists(surf)) {
 	
     // Reset all of your draw stuff
     gpu_set_blendmode(bm_normal);
-	draw_set_color(c_white);
     draw_set_alpha(1);
+	draw_set_color(c_aqua);
+	draw_set_font(wallFont);
+	draw_set_halign(fa_left);
+
+	// Draw Speed Run Timer
+	if(global.speedRunShow)
+	{
+		if(global.seconds < 10 && global.minutes < 10)
+		{
+			draw_text(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]), string(global.hours) + ":0" + string(global.minutes) + ":0" + string(global.seconds));
+		}
+		else
+		if(global.seconds >= 10 && global.minutes < 10)
+		{
+			draw_text(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]), string(global.hours) + ":0" + string(global.minutes) + ":" + string(global.seconds));
+		}
+		else
+		if(global.seconds < 10 && global.minutes >= 10)
+		{
+			draw_text(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]), string(global.hours) + ":" + string(global.minutes) + ":0" + string(global.seconds));
+		}
+		else
+		if(global.seconds >= 10 && global.minutes >= 10)
+		{
+			draw_text(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]), string(global.hours) + ":" + string(global.minutes) + ":" + string(global.seconds));
+		}
+	}
+	
+	draw_set_halign(fa_center);	
+	draw_set_color(c_white);
     surface_reset_target();
 } else {
     // Again, surfaces can be a pain

@@ -25,6 +25,26 @@ menu[22] = "?";
 menu[23] = "?";
 menu[24] = "?";
 menu[25] = "?";
+menu[26] = "?";
+menu[27] = "?";
+menu[28] = "?";
+menu[29] = "?";
+menu[30] = "?";
+menu[31] = "?";
+menu[32] = "?";
+menu[33] = "?";
+menu[34] = "?";
+menu[35] = "?";
+menu[36] = "?";
+menu[37] = "?";
+menu[38] = "?";
+menu[39] = "?";
+menu[40] = "?";
+menu[41] = "?";
+menu[42] = "?";
+menu[43] = "?";
+menu[44] = "?";
+menu[45] = "?";
 
 memory[0] = 0;
 memory[1] = 0;
@@ -74,6 +94,57 @@ memory[44] = 0;
 memory[45] = 0;
 
 memory = scrLoadMemories(memory);
+
+if (
+memory[0] == 1 &&
+memory[1] == 1 &&
+memory[2] == 1 &&
+memory[3] == 1 &&
+memory[4] == 1 &&
+memory[5] == 1 &&
+memory[6] == 1 &&
+memory[7] == 1 &&
+memory[8] == 1 &&
+memory[9] == 1 &&
+memory[10] == 1 &&
+memory[11] == 1 &&
+memory[12] == 1 &&
+memory[13] == 1 &&
+memory[14] == 1 &&
+memory[15] == 1 &&
+memory[16] == 1 &&
+memory[17] == 1 &&
+memory[18] == 1 &&
+memory[19] == 1 &&
+memory[20] == 1 &&
+memory[21] == 1 &&
+memory[22] == 1 &&
+memory[23] == 1 &&
+memory[24] == 1 &&
+memory[25] == 1 &&
+memory[26] == 1 &&
+memory[27] == 1 &&
+memory[28] == 1 &&
+memory[29] == 1 &&
+memory[30] == 1 &&
+memory[31] == 1 &&
+memory[32] == 1 &&
+memory[33] == 1 &&
+memory[34] == 1 &&
+memory[35] == 1 &&
+memory[36] == 1 &&
+memory[37] == 1 &&
+memory[38] == 1 &&
+memory[39] == 1 &&
+memory[40] == 1 &&
+memory[41] == 1 &&
+memory[42] == 1 &&
+memory[43] == 1 &&
+memory[44] == 1 &&
+memory[45] == 1)
+{
+	steam_set_achievement("FIND_ALL_SECRETS");
+}
 
 if (memory[0] == 0) menu[0] = "?"; else menu[0] = "Where am I?"
 if (memory[1] == 0) menu[1] = "?"; else menu[1] = "What is this place?"

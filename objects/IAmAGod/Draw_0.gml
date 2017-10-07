@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "I am a God!");
+draw_text_colour(x, y, "I am a God!", c_black, c_black, c_black,c_black,alpha);
