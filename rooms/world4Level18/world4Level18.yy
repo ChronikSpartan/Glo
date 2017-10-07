@@ -225,12 +225,19 @@
         "af4609e8-41f0-4b27-a199-6578be643373",
         "b046c774-d6fb-4a6f-aad6-46b115652de8",
         "9261b001-502e-493c-8e65-e806c9c9ae6d",
+<<<<<<< HEAD
         "c8c4791a-d87b-4a36-8fbb-9071c8c0261e",
         "5c671b7b-b8df-45ef-95f1-6c76201f168f",
         "5d2ecbcd-8441-4a4c-a521-7c2e290e772f",
         "78e4ccf1-d1f6-4525-bb16-34b4b1bbdb7d",
         "6c51a02c-6747-4123-81bc-27b7d05d1227",
         "70a2bb73-f64f-4f4e-9790-5da66db5d7d4"
+=======
+        "92aa9b6d-5037-4e4e-9c54-c1e71356f284",
+        "5455a9e8-1bbe-42d7-a43f-881f2743e244",
+        "b9c453a9-446c-46e0-b24c-a5cd38ec428d",
+        "5116bb9d-f6d0-4eaf-8269-c95526e98bc6"
+>>>>>>> origin/master
     ],
     "IsDnD": true,
     "layers": [
@@ -248,12 +255,19 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
+<<<<<<< HEAD
                 {"name": "inst_556EC398","id": "c8c4791a-d87b-4a36-8fbb-9071c8c0261e","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_556EC398","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 640,"y": 64},
                 {"name": "inst_1EB8A11C","id": "5c671b7b-b8df-45ef-95f1-6c76201f168f","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_1EB8A11C","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 704,"y": 384},
                 {"name": "inst_548FA709","id": "5d2ecbcd-8441-4a4c-a521-7c2e290e772f","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_548FA709","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 160,"y": 640},
                 {"name": "inst_A82CF16","id": "78e4ccf1-d1f6-4525-bb16-34b4b1bbdb7d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_A82CF16","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 416,"y": 256},
                 {"name": "inst_3A8B03AE","id": "6c51a02c-6747-4123-81bc-27b7d05d1227","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3A8B03AE","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 192,"y": 352},
                 {"name": "inst_28EC5324","id": "70a2bb73-f64f-4f4e-9790-5da66db5d7d4","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_28EC5324","objId": "776a32de-7f6b-42ad-a29b-8fc41681f7db","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 768,"y": 256}
+=======
+                {"name": "inst_3AE82EB","id": "92aa9b6d-5037-4e4e-9c54-c1e71356f284","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3AE82EB","objId": "92bece46-ddd8-4747-8393-e4609efd3fc4","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 240,"y": 278},
+                {"name": "inst_2B6FEA13","id": "5455a9e8-1bbe-42d7-a43f-881f2743e244","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2B6FEA13","objId": "92bece46-ddd8-4747-8393-e4609efd3fc4","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 496,"y": 278},
+                {"name": "inst_3C6097D2","id": "b9c453a9-446c-46e0-b24c-a5cd38ec428d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3C6097D2","objId": "92bece46-ddd8-4747-8393-e4609efd3fc4","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 464,"y": 406},
+                {"name": "inst_5C82D46F","id": "5116bb9d-f6d0-4eaf-8269-c95526e98bc6","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": true,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_5C82D46F","objId": "92bece46-ddd8-4747-8393-e4609efd3fc4","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 784,"y": 406}
+>>>>>>> origin/master
             ],
             "layers": [
 

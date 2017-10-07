@@ -6,7 +6,11 @@ numberOfBits = random_range(4,8);
 
 repeat(numberOfBits)
 {
+<<<<<<< HEAD
 	instance_create_layer(x + 0, y + 0, "EnemyLayer", oSliderBits);
+=======
+	instance_create_layer(x + 0, y + 0, "Instances", oSliderBits);
+>>>>>>> origin/master
 }
 
 instance_create_layer(x + 0, y + 0, "Instances", oExplode);
