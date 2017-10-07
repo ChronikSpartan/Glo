@@ -20,7 +20,8 @@
         "ee63fcad-fb19-4313-83bf-ace945da2211",
         "05b4f8d2-ee5e-43ae-9593-ce84017dd558",
         "163df05d-f1e9-4cd2-b82c-a10e56bd44f2",
-        "9564b89d-1c44-42a0-9d07-06928bc21b4d"
+        "9564b89d-1c44-42a0-9d07-06928bc21b4d",
+        "cdea5018-4406-4eb3-a1b6-cca6d3ca00ce"
     ],
     "filterType": "GMObject",
     "folderName": "World4",

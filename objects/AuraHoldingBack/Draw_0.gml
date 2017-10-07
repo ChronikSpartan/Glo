@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "It's only holding you back");
+draw_text_colour(x, y, "It's only holding you back", c_black, c_black, c_black,c_black,alpha);

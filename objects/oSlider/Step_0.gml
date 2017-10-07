@@ -90,7 +90,7 @@ if(place_meeting(x,y+vsp,oCollider))
 		y+= sign(vsp);
 	}
 	vsp = 0;
-	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider))
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
 	{
 		dir *= -1;
 	}
@@ -103,7 +103,7 @@ if(place_meeting(x,y+vsp,oSlidingCollider))
 		y+= sign(vsp);
 	}
 	vsp = 0;
-	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider))
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
 	{
 		dir *= -1;
 	}
@@ -116,7 +116,7 @@ if(place_meeting(x,y+vsp,oVertSlidingCollider))
 		y+= sign(vsp);
 	}
 	vsp = 0;
-	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider))
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
 	{
 		dir *= -1;
 	}
@@ -129,7 +129,7 @@ if(place_meeting(x,y+vsp,oColliderGlow))
 		y+= sign(vsp);
 	}
 	vsp = 0;
-	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow))
+	if (fearOfHeights&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
 	{
 		dir *= -1;
 	}
@@ -142,7 +142,7 @@ if(place_meeting(x,y+vsp,oBreakableBlock))
 		y+= sign(vsp);
 	}
 	vsp = 0;
-	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
+	if (fearOfHeights && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oCollider) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oVertSlidingCollider)&& !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oColliderGlow) && !position_meeting(x+(sprite_width/2)*dir, y+(sprite_height/2)+8, oBreakableBlock))
 	{
 		dir *= -1;
 	}

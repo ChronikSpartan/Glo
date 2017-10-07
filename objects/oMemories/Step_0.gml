@@ -17,12 +17,8 @@ if(move != 0)
 	if (nextMove < 0) nextMove = array_length_1d(menu) - 1;
 	if (nextMove > array_length_1d(menu) - 1) nextMove = 0;
 	
-	// Move if level unlocked
-	if(memory[nextMove] > 0)
-	{
-		audio_play_sound(menuMove,0,0);
-		menuPos = nextMove;
-	}
+	audio_play_sound(menuMove,0,0);
+	menuPos = nextMove;
 }
 
 y = (room_height/1.5) + 18 + (menuPos * space);
