@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "10db59d8-d555-45fe-8bb1-1d6e9f7d1445",
+            "Value": {
+                "id": "91cf60b2-4810-48e8-a1c7-68d6a0813b68",
+                "resourcePath": "sprites\\sTache\\sTache.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1109a3ed-5218-4cc0-b63f-3dd1a198a7ba",
             "Value": {
                 "id": "ea2c89e0-34a8-4cb3-948d-a9931c2b4a5e",
@@ -2820,6 +2828,14 @@
                 "id": "d91aa3a4-bb19-4889-ac94-7d7e1eaadeb0",
                 "resourcePath": "rooms\\world1Level3\\world1Level3.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "c0acbf3c-340c-41c6-bfa7-ab885f55b0a2",
+            "Value": {
+                "id": "cc8f2f86-62ca-4a93-8241-236cd815c52c",
+                "resourcePath": "objects\\oTache\\oTache.yy",
+                "resourceType": "GMObject"
             }
         },
         {

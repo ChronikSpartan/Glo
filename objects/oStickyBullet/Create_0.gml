@@ -15,23 +15,13 @@ if(gamepad_is_connected(0))
 	var v_point = gamepad_axis_value(0, gp_axisrv);
 	if ((h_point !=0) || (v_point!=0))
 	{
-<<<<<<< HEAD
 		direction = point_direction(0, 0, h_point, v_point);
-=======
-		image_angle = point_direction(0, 0, h_point, v_point);
->>>>>>> origin/master
 	}
 }
 else
 {
-<<<<<<< HEAD
 	direction = point_direction(x, y, mouse_x, mouse_y);
 }
-=======
-	image_angle = point_direction(x, y, mouse_x, mouse_y);
-}
-direction = image_angle;
->>>>>>> origin/master
 
 alarm_set(0, 240);
 

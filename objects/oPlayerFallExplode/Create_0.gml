@@ -14,10 +14,6 @@ repeat(numberOfBits)
 {
 	with(oPlayer)
 	{
-<<<<<<< HEAD
 		instance_create_layer(x + 0, y + 0, "EnemyLayer", oPlayerBits);
-=======
-		instance_create_layer(x + 0, y + 0, "Instances", oPlayerBits);
->>>>>>> origin/master
 	}
 }

@@ -4,7 +4,7 @@ vsp = 2;
 dotSpeed = random_range(10,15);
 dotColour = random_range(0, 6);
 
-direction = choose(135,90,45,180,0,225,270,315);
+direction = choose(0, 22, 45, 67, 90, 112, 135, 157, 180, 202, 225, 257, 270, 292, 315, 337);
 
 speed = dotSpeed;
 

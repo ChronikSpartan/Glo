@@ -18,7 +18,6 @@ if (audio_is_playing(theTrap))
 {
 	audio_sound_gain(theTrap, 0, 1000);
 }
-<<<<<<< HEAD
 
 if (audio_is_playing(slapHook))
 {
@@ -28,11 +27,6 @@ else
 {
 	audio_play_sound(slapHook,0,1);
 	audio_sound_gain(slapHook, 1, 2000);
-=======
-if (!audio_is_playing(slapHook))
-{
-	audio_play_sound(slapHook, 0, 1);
->>>>>>> origin/master
 }
 
 alarm_set(0, 100);

@@ -343,6 +343,16 @@ if (surface_exists(surf)) {
 		gpu_set_blendmode(bm_subtract);
 	}
 	
+	with (oTache){
+		randomRangeX = random_range(-1, 1);
+		randomRangeY = random_range(-1, 1);
+		randomRangeSize = random_range(-1, 1);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_black, 1);
+		gpu_set_blendmode(bm_zero);
+		draw_sprite_ext(sGradient, 0, x + randomRangeX, y + randomRangeY, 0.5, 0.5, 0, c_white, 0);
+		gpu_set_blendmode(bm_subtract);
+	}
+	
 	with (oSliderBits){
 		randomRangeX = random_range(-1, 1);
 		randomRangeY = random_range(-1, 1);
