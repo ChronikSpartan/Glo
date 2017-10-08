@@ -10,6 +10,8 @@ explodeAlpha = 1;
 
 numberOfBits = random_range(10,15);
 
+scrRecordDeaths();
+
 repeat(numberOfBits)
 {
 	with(oPlayer)

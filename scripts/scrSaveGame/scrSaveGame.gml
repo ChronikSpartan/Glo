@@ -1,5 +1,7 @@
 ini_open("save.sav");
-var SavedRoom = room - 1;
+
+var SavedRoom = room - 3;
+
 switch(SavedRoom)
 {
 	case 1:

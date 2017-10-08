@@ -1,3 +1,5 @@
+var deathCheck = 0;
+
 if (file_exists("save.sav"))
 {
 	ini_open("save.sav");
