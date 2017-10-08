@@ -7,9 +7,9 @@
     "option_windows_borderless": false,
     "option_windows_company_info": "Chronik Spartan",
     "option_windows_copyright_info": "(c) 2017 Chronik Spartan",
-    "option_windows_description_info": "An atmospheric platformer set in the dark",
+    "option_windows_description_info": "A puzzle platformer set in the dark",
     "option_windows_display_cursor": true,
-    "option_windows_display_name": "Glo Beta",
+    "option_windows_display_name": "Glo",
     "option_windows_enable_steam": true,
     "option_windows_executable_name": "${project_name}",
     "option_windows_icon": "${options_dir}\\windows\\icons\\icon.ico",
@@ -24,14 +24,14 @@
     "option_windows_scale": 0,
     "option_windows_sleep_margin": 10,
     "option_windows_splash_screen": "${options_dir}\\windows\\splash\\splash.png",
-    "option_windows_start_fullscreen": false,
+    "option_windows_start_fullscreen": true,
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": true,
     "option_windows_version": {
         "build": 0,
-        "major": 0,
+        "major": 1,
         "minor": 0,
-        "revision": 1
+        "revision": 2
     },
     "option_windows_vsync": true
 }

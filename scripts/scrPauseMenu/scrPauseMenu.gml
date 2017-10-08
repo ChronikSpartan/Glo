@@ -2,12 +2,12 @@ switch(menuPos)
 {
 	case 0:
 	{
-		room_goto(startScreen);
+		room_restart();
 		break;
 	}
 	case 1:
 	{
-		room_goto_next();
+		room_goto(startScreen);
 		break;
 	}
 	default: break;

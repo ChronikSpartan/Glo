@@ -15,7 +15,7 @@ var colliderLeft = instance_place(x - 1, y, oCollider);
 var slidingColliderBelow = instance_place(x, y + 1, oSlidingCollider);
 var slidingColliderRight = instance_place(x + 1, y, oSlidingCollider);
 var slidingColliderLeft = instance_place(x - 1, y, oSlidingCollider);
-var vertSlidingColliderBelow = instance_place(x, y + 1, oVertSlidingCollider);
+var vertSlidingColliderBelow = max(instance_place(x, y + 1, oVertSlidingCollider), instance_place(x, y + 2, oVertSlidingCollider));
 var vertSlidingColliderRight = instance_place(x + 1, y, oVertSlidingCollider);
 var vertSlidingColliderLeft = instance_place(x - 1, y, oVertSlidingCollider);
 var colliderGlowBelow = instance_place(x, y + 1, oColliderGlow);
@@ -24,7 +24,7 @@ var colliderGlowLeft = instance_place(x - 1, y, oColliderGlow);
 var slidingGlowBelow = instance_place(x, y + 1, oSlidingGlow);
 var slidingGlowRight = instance_place(x + 1, y, oSlidingGlow);
 var slidingGlowLeft = instance_place(x - 1, y, oSlidingGlow);
-var vertSlidingGlowBelow = instance_place(x, y + 1, oVertSlidingGlow);
+var vertSlidingGlowBelow = max(instance_place(x, y + 1, oVertSlidingGlow),instance_place(x, y + 2, oVertSlidingGlow));
 var vertSlidingGlowRight = instance_place(x + 1, y, oVertSlidingGlow);
 var vertSlidingGlowLeft = instance_place(x - 1, y, oVertSlidingGlow);
 var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
@@ -449,7 +449,7 @@ if (left_mb)
 {
 	if(cooldown <= 0)
 	{
-		instance_create_layer(x, y, "Instances", oBullet);
+		instance_create_layer(x, y, "EnemyLayer", oBullet);
 	
 		cooldown = 60;
 	}
@@ -474,14 +474,14 @@ if(alternateBullets > 0)
 			{
 				if(bulletType == "pinball")
 				{
-					instance_create_layer(x, y, "Instances", oPinballBullet);
+					instance_create_layer(x, y, "EnemyLayer", oPinballBullet);
 				}
 			
 				else
 				{
 					if(bulletType == "bomb")
 					{
-						instance_create_layer(x, y, "Instances", oBomb);
+						instance_create_layer(x, y, "EnemyLayer", oBomb);
 					}
 				}
 			}

@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "Say goodbye to\nyour stupid exits!");
+draw_text_colour(x, y, "Say goodbye to\nyour stupid exits!", c_black, c_black, c_black,c_black,alpha);
