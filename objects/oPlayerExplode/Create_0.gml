@@ -9,7 +9,10 @@ explodeSize = 60;
 explodeAlpha = 1;
 
 numberOfBits = random_range(10,15);
+<<<<<<< HEAD
 scrRecordDeaths();
+=======
+>>>>>>> origin/master
 
 
 repeat(numberOfBits)
