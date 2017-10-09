@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 var deathCheck = 0;
 
-=======
->>>>>>> origin/master
 if (file_exists("save.sav"))
 {
 	ini_open("save.sav");
