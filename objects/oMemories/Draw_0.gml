@@ -31,6 +31,6 @@ for(m = 0; m < array_length_1d(menu); m += 1)
 selectorX = (room_width/2) - 128;
 selectorY = (room_height/1.5) + 18;
 draw_sprite(sBlack, 0, 0, 0);
-draw_sprite(sGlogo, 0, room_width/2, room_height/4);
+draw_sprite(sGlogo, 0, room_width/2, room_height/3);
 draw_text(150, 10, "Esc/Select: Exit");
 draw_set_colour(c_black);

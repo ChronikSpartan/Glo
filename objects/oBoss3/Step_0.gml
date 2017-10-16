@@ -77,5 +77,5 @@ if(hitPoints == 0)
 	}
 	audio_sound_pitch(bossDead, pitch);
 	audio_play_sound(bossDead,0,1);
-	instance_change(oBoss1Death, true);
+	instance_change(oBoss3Death, true);
 }

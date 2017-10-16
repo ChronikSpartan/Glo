@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "YOU!");
+draw_text_colour(x, y, "YOU!", c_black, c_black, c_black,c_black,alpha);
