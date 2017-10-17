@@ -3,7 +3,8 @@
 menu[0] = "START";
 menu[1] = "SPEED RUN";
 menu[2] = "MEMORIES";
-menu[3] = "EXIT";
+menu[3] = "TUTORIAL";
+menu[4] = "EXIT";
 
 global.speedRunShow = 0;
 global.speedRunCount = 0;

@@ -22,6 +22,11 @@ switch(menuPos)
 	}
 	case 3:
 	{
+		room_goto(controlsScreen);
+		break;
+	}
+	case 4:
+	{
 		game_end();
 		break;
 	}

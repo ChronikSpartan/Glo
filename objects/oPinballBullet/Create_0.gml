@@ -12,12 +12,7 @@ speed = 10;
 
 if(gamepad_is_connected(0))
 {
-	var h_point = gamepad_axis_value(0, gp_axisrh);
-	var v_point = gamepad_axis_value(0, gp_axisrv);
-	if ((h_point !=0) || (v_point!=0))
-	{
-		direction = point_direction(0, 0, h_point, v_point);
-	}
+	direction = point_direction(0, 0, global.h_aim, global.v_aim);
 }
 else
 {

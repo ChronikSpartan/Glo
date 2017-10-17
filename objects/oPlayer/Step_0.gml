@@ -6,7 +6,17 @@ key_right = keyboard_check(ord("D")) || keyboard_check(vk_right)  || (gamepad_ax
 right_mb = mouse_check_button(mb_right) || gamepad_button_check(0, gp_shoulderlb);
 left_mb = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb);
 
-//instance_create_layer(x,y, "Instances", oTrail);
+// Record gamepad aiming position
+if(gamepad_is_connected(0))
+{
+	var h_point = gamepad_axis_value(0, gp_axisrh);
+	var v_point = gamepad_axis_value(0, gp_axisrv);
+	if ((h_point !=0) || (v_point!=0))
+	{
+		global.h_aim = h_point;
+		global.v_aim = v_point;
+	}
+}
 
 // Set up colliders
 var colliderBelow = instance_place(x, y + 1, oCollider);
@@ -31,20 +41,20 @@ var breakableBelow = instance_place(x, y + 1, oBreakableBlock);
 var breakableRight = instance_place(x + 1, y , oBreakableBlock);
 var breakableLeft = instance_place(x - 1, y, oBreakableBlock);
 
-var nearColliderRight = max(instance_place(x + 2, y, oCollider), instance_place(x + 3, y, oCollider), instance_place(x + 4, y, oCollider),0);
-var nearColliderLeft = max(instance_place(x - 2, y, oCollider), instance_place(x - 3, y, oCollider), instance_place(x - 4, y, oCollider),0);
-var nearSlidingColliderRight = max(instance_place(x + 2, y, oSlidingCollider), instance_place(x + 3, y, oSlidingCollider), instance_place(x + 4, y, oSlidingCollider),0);
-var nearSlidingColliderLeft = max(instance_place(x - 2, y, oSlidingCollider), instance_place(x - 3, y, oSlidingCollider), instance_place(x - 4, y, oSlidingCollider),0);
-var nearVertSlidingColliderRight = max(instance_place(x + 2, y, oVertSlidingCollider), instance_place(x + 3, y, oVertSlidingCollider), instance_place(x + 4, y, oVertSlidingCollider),0);
-var nearVertSlidingColliderLeft = max(instance_place(x - 2, y, oVertSlidingCollider), instance_place(x - 3, y, oVertSlidingCollider), instance_place(x - 4, y, oVertSlidingCollider),0);
-var nearColliderGlowRight = max(instance_place(x + 2, y, oColliderGlow), instance_place(x + 3, y, oColliderGlow), instance_place(x + 4, y, oColliderGlow),0);
-var nearColliderGlowLeft = max(instance_place(x - 2, y, oColliderGlow), instance_place(x - 3, y, oColliderGlow), instance_place(x - 4, y, oColliderGlow),0);
-var nearSlidingGlowRight = max(instance_place(x + 2, y, oSlidingGlow), instance_place(x + 3, y, oSlidingGlow), instance_place(x + 4, y, oSlidingGlow),0);
-var nearSlidingGlowLeft = max(instance_place(x - 2, y, oSlidingGlow), instance_place(x - 3, y, oSlidingGlow), instance_place(x - 4, y, oSlidingGlow),0);
-var nearVertSlidingGlowRight = max(instance_place(x + 2, y, oVertSlidingGlow), instance_place(x + 3, y, oVertSlidingGlow), instance_place(x + 4, y, oVertSlidingGlow),0);
-var nearVertSlidingGlowLeft = max(instance_place(x - 2, y, oVertSlidingGlow), instance_place(x - 3, y, oVertSlidingGlow), instance_place(x - 4, y, oVertSlidingGlow),0);
-var nearBreakableRight = max(instance_place(x + 2, y , oBreakableBlock), instance_place(x + 3, y , oBreakableBlock), instance_place(x + 4, y , oBreakableBlock),0);
-var nearBreakableLeft = max(instance_place(x - 2, y, oBreakableBlock), instance_place(x - 3, y, oBreakableBlock), instance_place(x - 4, y, oBreakableBlock),0);
+var nearColliderRight = max(instance_place(x + 2, y, oCollider), instance_place(x + 3, y, oCollider), instance_place(x + 4, y, oCollider), instance_place(x + 5, y, oCollider),0);
+var nearColliderLeft = max(instance_place(x - 2, y, oCollider), instance_place(x - 3, y, oCollider), instance_place(x - 4, y, oCollider), instance_place(x - 5, y, oCollider),0);
+var nearSlidingColliderRight = max(instance_place(x + 2, y, oSlidingCollider), instance_place(x + 3, y, oSlidingCollider), instance_place(x + 4, y, oSlidingCollider), instance_place(x + 5, y, oSlidingCollider),0);
+var nearSlidingColliderLeft = max(instance_place(x - 2, y, oSlidingCollider), instance_place(x - 3, y, oSlidingCollider), instance_place(x - 4, y, oSlidingCollider), instance_place(x - 5, y, oSlidingCollider),0);
+var nearVertSlidingColliderRight = max(instance_place(x + 2, y, oVertSlidingCollider), instance_place(x + 3, y, oVertSlidingCollider), instance_place(x + 4, y, oVertSlidingCollider), instance_place(x + 5, y, oVertSlidingCollider),0);
+var nearVertSlidingColliderLeft = max(instance_place(x - 2, y, oVertSlidingCollider), instance_place(x - 3, y, oVertSlidingCollider), instance_place(x - 4, y, oVertSlidingCollider), instance_place(x - 5, y, oVertSlidingCollider),0);
+var nearColliderGlowRight = max(instance_place(x + 2, y, oColliderGlow), instance_place(x + 3, y, oColliderGlow), instance_place(x + 4, y, oColliderGlow), instance_place(x + 5, y, oColliderGlow),0);
+var nearColliderGlowLeft = max(instance_place(x - 2, y, oColliderGlow), instance_place(x - 3, y, oColliderGlow), instance_place(x - 4, y, oColliderGlow), instance_place(x - 5, y, oColliderGlow),0);
+var nearSlidingGlowRight = max(instance_place(x + 2, y, oSlidingGlow), instance_place(x + 3, y, oSlidingGlow), instance_place(x + 4, y, oSlidingGlow), instance_place(x + 5, y, oSlidingGlow),0);
+var nearSlidingGlowLeft = max(instance_place(x - 2, y, oSlidingGlow), instance_place(x - 3, y, oSlidingGlow), instance_place(x - 4, y, oSlidingGlow), instance_place(x - 5, y, oSlidingGlow),0);
+var nearVertSlidingGlowRight = max(instance_place(x + 2, y, oVertSlidingGlow), instance_place(x + 3, y, oVertSlidingGlow), instance_place(x + 4, y, oVertSlidingGlow), instance_place(x + 5, y, oVertSlidingGlow),0);
+var nearVertSlidingGlowLeft = max(instance_place(x - 2, y, oVertSlidingGlow), instance_place(x - 3, y, oVertSlidingGlow), instance_place(x - 4, y, oVertSlidingGlow), instance_place(x - 5, y, oVertSlidingGlow),0);
+var nearBreakableRight = max(instance_place(x + 2, y , oBreakableBlock), instance_place(x + 3, y , oBreakableBlock), instance_place(x + 4, y , oBreakableBlock), instance_place(x + 5, y , oBreakableBlock),0);
+var nearBreakableLeft = max(instance_place(x - 2, y, oBreakableBlock), instance_place(x - 3, y, oBreakableBlock), instance_place(x - 4, y, oBreakableBlock), instance_place(x - 5, y, oBreakableBlock),0);
 
 // Animation
 if (jumped > 0)

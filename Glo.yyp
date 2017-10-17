@@ -855,6 +855,14 @@
             }
         },
         {
+            "Key": "3a6bc961-c3cf-4edd-9d5a-7c8042be7ee8",
+            "Value": {
+                "id": "4081fe10-b6fc-4b21-9b20-72d7363fb24d",
+                "resourcePath": "objects\\TutPinballBullet\\TutPinballBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3a8a2afd-a3d5-4776-9250-50e4dc111193",
             "Value": {
                 "id": "efb792db-cc09-4195-897e-a5fe5a8cea60",
@@ -1292,6 +1300,14 @@
                 "id": "6386f59c-db8c-4913-81e0-96296b9056be",
                 "resourcePath": "scripts\\scrLoadMemories\\scrLoadMemories.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5e64bb42-778a-4b18-bf02-45450cad8831",
+            "Value": {
+                "id": "23374e4f-aff5-4b89-b8cf-8f4f4021f578",
+                "resourcePath": "objects\\Projectile\\Projectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2103,6 +2119,14 @@
             }
         },
         {
+            "Key": "92be4534-1945-463f-aa31-6652b9d9c16b",
+            "Value": {
+                "id": "067e0179-b465-4a0d-94e9-c69cc8ddd292",
+                "resourcePath": "objects\\TutStickyBullet\\TutStickyBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "92bece46-ddd8-4747-8393-e4609efd3fc4",
             "Value": {
                 "id": "b8f9c50b-e195-46c5-ac21-88b24370f0bd",
@@ -2287,6 +2311,14 @@
             }
         },
         {
+            "Key": "9fa55df3-4741-451e-ad74-296e729400d3",
+            "Value": {
+                "id": "d5102984-13d8-41ae-8f13-e10da67be8ac",
+                "resourcePath": "objects\\TutMemory\\TutMemory.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a0352607-65f4-40d9-9455-f7a6cb8be665",
             "Value": {
                 "id": "e44f40a9-a972-4a64-a549-7577d674b913",
@@ -2363,6 +2395,14 @@
             "Value": {
                 "id": "d8bf6d6e-4c0f-46f9-8e05-ab72e5463631",
                 "resourcePath": "objects\\oBossDeathShake\\oBossDeathShake.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a3fe3c0a-6e90-4fcc-9368-a1c2e13b4466",
+            "Value": {
+                "id": "9123ee79-0604-4a06-92f3-84138e89b926",
+                "resourcePath": "objects\\TutKey\\TutKey.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2786,7 +2826,7 @@
             "Key": "bd6fbf82-c6f5-47a2-8e41-b1d4fc334dba",
             "Value": {
                 "id": "cea5dbdc-2d40-4674-b308-5d5acbe3f97a",
-                "resourcePath": "objects\\oControlsTimer\\oControlsTimer.yy",
+                "resourcePath": "objects\\oControls\\oControls.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -3207,6 +3247,14 @@
             }
         },
         {
+            "Key": "dde410cc-f551-476c-bf85-3d93d460110f",
+            "Value": {
+                "id": "a4a679ce-295d-4b40-856e-69b7d7df678d",
+                "resourcePath": "objects\\TutFlareBomb\\TutFlareBomb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "df9c55a3-2ea5-493f-8836-d2987d75f743",
             "Value": {
                 "id": "722bcbbf-a054-44c6-bcc9-19f115de8abb",
@@ -3252,6 +3300,14 @@
                 "id": "07d2f17d-c90c-4240-9983-dc957b46a58f",
                 "resourcePath": "rooms\\world1Level24\\world1Level24.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e1faf96a-c66c-4e67-8c4e-a52140614e2a",
+            "Value": {
+                "id": "61aa59ea-7852-4090-b2b7-5793f9536a3d",
+                "resourcePath": "objects\\TutItems\\TutItems.yy",
+                "resourceType": "GMObject"
             }
         },
         {
