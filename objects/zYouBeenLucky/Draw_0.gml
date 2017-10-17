@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "You have been lucky so far");
+draw_text_colour(x, y, "You have been lucky so far", c_black, c_black, c_black,c_black,alpha);

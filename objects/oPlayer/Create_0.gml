@@ -1,3 +1,5 @@
+global.h_aim = 0;
+global.v_aim = 0;
 grav = 0.5;
 terminalVelocity = 10;
 hsp = 0;
@@ -36,4 +38,4 @@ previousY = y;
 alarm_set(0,60);
 
 
-gamepad_set_axis_deadzone(0, 0.4);
+gamepad_set_axis_deadzone(0, 0.25);

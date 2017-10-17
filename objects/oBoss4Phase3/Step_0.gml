@@ -29,12 +29,12 @@ if(image_xscale < 0.1)
 	image_xscale = 1;
 	image_yscale = 1;
 	instance_destroy(oStickyBullet);
-	var pitch = random_range(0.5, 1.5);
 	if (audio_is_playing(slapHook))
 	{
 		audio_sound_gain(slapHook, 0, 7000);
 	}
-	audio_sound_pitch(bossDead, pitch);
-	audio_play_sound(bossDead,0,1);
+	var pitch = random_range(0.5, 1.5);
+	audio_sound_pitch(bossFinish2, pitch);
+	audio_play_sound(bossFinish2,0,0);
 	instance_change(oBoss4Death, true);
 }

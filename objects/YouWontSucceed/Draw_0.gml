@@ -1,3 +1,2 @@
-draw_set_color(c_black);
 draw_set_font(wallFont);
-draw_text(x, y, "You wont succeed");
+draw_text_colour(x, y, "You wont succeed", c_black, c_black, c_black,c_black,alpha);

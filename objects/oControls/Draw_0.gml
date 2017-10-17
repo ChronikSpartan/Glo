@@ -1,0 +1,1 @@
+draw_text(1100, 670, "Esc/Select: Main Menu");

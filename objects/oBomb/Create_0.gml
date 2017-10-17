@@ -1,3 +1,6 @@
+steam_set_achievement("GLO_BOMB");
+global.shots++;
+
 direction = 90;
 
 speed += 5;
