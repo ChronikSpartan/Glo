@@ -22,14 +22,11 @@ switch(menuPos)
 	}
 	case 3:
 	{
-<<<<<<< HEAD
 		room_goto(controlsScreen);
 		break;
 	}
 	case 4:
 	{
-=======
->>>>>>> origin/master
 		game_end();
 		break;
 	}

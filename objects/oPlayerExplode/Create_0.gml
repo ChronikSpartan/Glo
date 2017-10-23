@@ -9,20 +9,8 @@ explodeSize = 60;
 explodeAlpha = 1;
 
 numberOfBits = random_range(10,15);
-<<<<<<< HEAD
 scrRecordDeaths();
 
-=======
-<<<<<<< HEAD
-scrRecordDeaths();
-
-=======
-
-scrRecordDeaths();
-
-
->>>>>>> origin/master
->>>>>>> origin/master
 
 repeat(numberOfBits)
 {
@@ -31,5 +19,12 @@ repeat(numberOfBits)
 		instance_create_layer(x + 0, y + 0, "EnemyLayer", oPlayerBits);
 	}
 }
+
+
+//with(oPlayer)
+//{
+//	instance_create_layer(x + 0, y + 0, "EnemyLayer", oTache);
+//}
+
 
 instance_destroy(oPlayer);

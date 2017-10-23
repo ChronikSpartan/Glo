@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
->>>>>>> origin/master
 var deathCheck = 0;
 
 if (file_exists("save.sav"))

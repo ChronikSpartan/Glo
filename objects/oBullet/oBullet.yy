@@ -103,7 +103,6 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "a707a9f9-e6fe-4b96-b380-b0bc3b1f6fd2"
-<<<<<<< HEAD
         },
         {
             "id": "c128d37b-706b-4dbd-b207-c0deb4c8893c",
@@ -114,8 +113,6 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "a707a9f9-e6fe-4b96-b380-b0bc3b1f6fd2"
-=======
->>>>>>> origin/master
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
